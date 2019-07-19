@@ -799,6 +799,11 @@ table tbody th {
   color:#FFF;
 }
 
+.session_header .key{
+  background:#e9b6d2;
+  color:#000;
+}
+
 .session_header .other{
   background:#1e1c4d;
   color:#FFF;
