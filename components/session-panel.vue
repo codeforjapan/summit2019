@@ -39,6 +39,8 @@
 <script>
 import _ from 'lodash'
 
+import { toCategory } from '~/logic/category'
+
 export default {
   props: {
     session: {
@@ -48,12 +50,6 @@ export default {
 
   data() {
     return {
-      categories: {
-        'プレゼンテーション': { class: 'presen', label: 'プレゼン' },
-        'ワークショップ': { class: 'ws', label: 'WS'},
-        'パネルディスカッション': { class: 'panel-dis', label: 'パネル' },
-        '基調講演': { class: 'key', label: 'KeyNote' }
-      },
       tagClass: 'syubetsu_tag'
     }
   },
@@ -88,7 +84,7 @@ export default {
     },
 
     category() {
-      return _.get(this.categories, this.session.category, { class: 'other', label: 'その他' })
+      return toCategory(this.session.category)
     },
 
     categoryClass() {

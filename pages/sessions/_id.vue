@@ -2,56 +2,62 @@
   <div class="null-container">
     <!-- Header -->
     <header id="header" class="session_page">
-      <div class="intro">
-        <div class="overlay">
-          <div class="container">
-            <h1>Program</h1>
-            <p>プログラム</p>
+      <div class="intro"></div>
+    </header>
+    <div class="content-container">
+      <div class="back-link">
+        <nuxt-link to="/session">＜戻る</nuxt-link>
+      </div>
+      <div class="basic-info">
+        <ul>
+          <li>
+            <i class="fa fa-clock-o"></i>
+            日時： {{ eventDateTime }}
+          </li>
+          <li>
+            <i class="fa fa-map-marker"></i>
+            会場： <span>{{ room }}</span></li>
+        </ul>
+        <div :class="[tagClass, categoryClass]">
+          {{ category.label }}
+        </div>
+      </div>
+      <div class="title">
+        <h1>{{ title }}</h1>
+        <div class="share-link">
+          <div class="label-area">
+            シェア &gt;
+          </div>
+          <div class="social-icon">
+            <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
+            <a href="https://twitter.com/intent/tweet"><i class="fa fa-twitter fa-lg"></i></a>
           </div>
         </div>
       </div>
-    </header>
-    <div class="back-link">
-      <nuxt-link to="/session">＜戻る</nuxt-link>
-    </div>
-    <div class="basic-info">
-      <ul>
-        <li>日時: {{ eventDateTime }}</li>
-        <li>会場: <span>{{ room }}</span></li>
-      </ul>
-      <div class="tag">
-
-      </div>
-    </div>
-    <div class="title">
-      <h1>{{ title }}</h1>
-      <div class="share-link">
-
-      </div>
-    </div>
-    <section id="description">
-      <h2>概要</h2>
-      <hr>
-      <p><span v-html="description"></span></p>
-    </section>
-    <section id="timeline">
-      <h2>流れ</h2>
-      <hr>
-      <p><span v-html="timeline"></span></p>
-    </section>
-    <section id="speaker">
-      <h2>登壇者</h2>
-      <hr>
-      <div class="speaker" v-for="s in speakers">
-        <div class="picture">
-          <div class="picture-box" :style="speakerStyle(s)"></div>
+      <section id="description">
+        <h2>概要</h2>
+        <hr>
+        <p><span v-html="description"></span></p>
+      </section>
+      <section id="timeline">
+        <h2>流れ</h2>
+        <hr>
+        <p><span v-html="timeline"></span></p>
+      </section>
+      <section id="speaker">
+        <h2>登壇者</h2>
+        <hr>
+        <div class="speaker" v-for="s in speakers">
+          <div class="picture">
+            <div class="picture-box" :style="speakerStyle(s)"></div>
+          </div>
+          <div class="profile">
+            <h3>{{ s.name }}</h3>
+            <p>{{ s.profile }}</p>
+          </div>
         </div>
-        <div class="profile">
-          <h3>{{ s.name }}</h3>
-          <p>{{ s.profile }}</p>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </div>
 </template>
 
@@ -59,11 +65,18 @@
 import _ from 'lodash'
 
 import { toSession } from '~/logic/session'
+import { toCategory } from '~/logic/category'
 
 export default {
   head() {
     return {
       title: 'プログラム',
+    }
+  },
+
+  data() {
+    return {
+      tagClass: 'tag'
     }
   },
 
@@ -86,6 +99,14 @@ export default {
 
     timeline() {
       return this.session.timeline.replace(/\r?\n/g, '<br>')
+    },
+
+    category() {
+      return toCategory(this.session.category)
+    },
+
+    categoryClass() {
+      return this.category.class
     },
 
     speakers() {
@@ -116,13 +137,35 @@ export default {
 </script>
 
 <style>
+.null-container {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  .content-container {
+    width: 680px;
+    margin: 0 auto;
+  }
+}
+
+header .intro {
+  height: 95px;
+}
+
 .back-link {
   padding: 5px 15px;
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.back-link a {
+  color: #777777;
 }
 
 .basic-info {
+  position: relative;
   padding: 5px 0 5px 15px;
+  height: 55px;
   background: #A4A1A1 0% 0% no-repeat padding-box;
 
   color: #FFFFFF;
@@ -130,8 +173,31 @@ export default {
   line-height: 1.5;
 }
 
+.basic-info ul {
+  margin: 0;
+}
+
+.basic-info i {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+}
+
 .basic-info span {
   text-decoration: underline;
+}
+
+.basic-info .tag {
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: center;
+  display: inline-block;
+  padding: 0 7px;
+  width: 6em;
+  font-size: 0.85em;
+  height: 55px;
+  line-height: 55px;
 }
 
 .title {
@@ -140,11 +206,70 @@ export default {
 }
 
 .title h1 {
+  margin: 0;
+  padding: 0 0 5px;
+  font-size: 18px;
+  line-height: 1.5;
   border-bottom: 1px solid #EEEEEE;
+  font-weight: 400;
+}
+
+.share-link {
+  position: relative;
+  height: 35px;
+}
+
+.label-area {
+  position: absolute;
+  top: 0;
+  right: 98px;
+
+  font-size: 12px;
+  line-height: 48px;
+}
+
+.social-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.social-icon a {
+  display: block;
+  float: left;
+  margin: 5px 10px 5px 0;
+  padding: 0;
+  color: #2F94A9;
+}
+
+.social-icon i {
+  width: 35px;
+  height: 35px;
+  margin: 0;
+  border: 1px solid #2F94A9;
+  border-radius: 50%;
+  line-height: 35px;
+  text-align: center;
+}
+
+.social-icon i:before {
+  padding: 0;
+  line-height: 35px;
+}
+
+.social-icon a:hover i {
+  background: #B0CDD3;
 }
 
 section {
   border-top: 1px solid #EEEEEE;
+}
+
+@media screen and (min-width: 768px) {
+  section {
+    width: 560px;
+    margin: 0 auto;
+  }
 }
 
 section h2 {
@@ -157,7 +282,8 @@ section h2 {
 
 section hr {
   margin: 0 auto;
-  border: 3px solid #FCEE21;
+  border: 0;
+  border-bottom: 3px solid #FCEE21;
   width: 40px;
 }
 

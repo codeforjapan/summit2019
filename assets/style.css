@@ -757,26 +757,27 @@ table tbody th {
   font-size:0.85em;
 }
 
-.session_header .ws{
+.session_header .ws, .tag.ws {
   background:#fcee21;
+  color: #777;
 }
 
-.session_header .presen{
+.session_header .presen, .tag.presen {
   background:#2f94a9;
   color:#FFF;
 }
 
-.session_header .panel-dis{
+.session_header .panel-dis, .tag.panel-dis {
   background:#ff4b00;
   color:#FFF;
 }
 
-.session_header .key{
+.session_header .key, .tag.key {
   background:#e9b6d2;
   color:#000;
 }
 
-.session_header .other{
+.session_header .other, .tag.other {
   background:#1e1c4d;
   color:#FFF;
 }
