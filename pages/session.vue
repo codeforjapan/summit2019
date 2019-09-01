@@ -65,6 +65,7 @@
 import _ from 'lodash'
 
 import SessionPanel from '~/components/session-panel'
+import { toSession } from '~/logic/session'
 
 export default {
   components: {
@@ -89,42 +90,14 @@ export default {
     day2() {
       return _.sortBy(
           _.filter(this.mappedSessions, (s) => {
-            return s.eventDate === '9/29'
+            return s.eventDate === '9/29' && !_.isNil(s.category)
           }), ['startTime']
       )
     },
 
     mappedSessions() {
       return _.map(this.sessions, (s) => {
-        return {
-          id: s.id,
-          eventDate: s.event_date,
-          startTime: s.start_time,
-          endTime: s.end_time,
-          category: s.category,
-          title: s.title,
-          description: s.description,
-          speakers: this.buildSpeakers(s)
-        }
-      })
-    }
-  },
-
-  methods: {
-    buildSpeakers(s) {
-      const suffixes = [ '_name', '_profile', '_picture' ]
-
-      const filtered = _.pickBy(s, (v, k) => {
-        return /^sp\d_name$/.test(k) && !_.isNil(v)
-      })
-
-      return _.map(Object.keys(filtered), (k) => {
-        const prefix = k.substr(0, 3)
-        return {
-          name: s[k],
-          profile: s[`${prefix}_profile`],
-          picture: s[`${prefix}_picture`]
-        }
+        return toSession(s)
       })
     }
   },

@@ -11,7 +11,7 @@
                   <div class="mv_elements">
                     <div class="mv_elements_wrap">
                       <div class="ie11_img_wrap">
-                        <img src="img/MV_logo_2.png">
+                        <img src="/img/MV_logo_2.png">
                       </div>
                       <div class="mv_text">
                         <p class="event-name-row">CODE <span style="font-weight:100;">for</span> JAPAN<br>SUMMIT <span style="color:#fcee21;">2019</span></p>

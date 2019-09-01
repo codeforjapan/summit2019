@@ -2,15 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Khula:300,400,600,700,800&display=swap&subset=devanagari,latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,900&display=swap&subset=japanese');
 
-body, html {
-	font-family: 'Raleway', sans-serif;
-	text-rendering: optimizeLegibility !important;
-	-webkit-font-smoothing: antialiased !important;
-	color: #777;
-	font-weight: 300;
-	width: 100% !important;
-	height: 100% !important;
-}
 h2 {
 	font-family:'Courgette', cursive;
 	margin: 0 0 10px 0;
@@ -74,26 +65,6 @@ ul, ol {
 	padding: 0;
 	webkit-padding: 0;
 	moz-padding: 0;
-}
-/*hr {
-	height: 2px;
-	width: 70px;
-	text-align: center;
-	position: relative;
-	background: #fcee21;
-	margin: 0;
-	margin-bottom: 40px;
-	border: 0;
-}*/
-
-hr {
-	border-style: none;
-    border-top: 3px dotted #fcee21;
-	width: 90px;
-	text-align: center;
-	position: relative;
-	margin: 0;
-	margin-bottom: 40px;
 }
 
 .btn:active, .btn.active {

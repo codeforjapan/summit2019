@@ -31,10 +31,10 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: 'img/favicon.ico' },
-      { rel: 'stylesheet', href: 'css/bootstrap.css' },
-      { rel: 'stylesheet', href: 'fonts/font-awesome/css/font-awesome.css' },
-      { rel: 'stylesheet', href: 'css/nivo-lightbox/nivo-lightbox.css' },
-      { rel: 'stylesheet', href: 'css/nivo-lightbox/default.css' },
+      { rel: 'stylesheet', href: '/css/bootstrap.css' },
+      { rel: 'stylesheet', href: '/fonts/font-awesome/css/font-awesome.css' },
+      { rel: 'stylesheet', href: '/css/nivo-lightbox/nivo-lightbox.css' },
+      { rel: 'stylesheet', href: '/css/nivo-lightbox/default.css' },
       { rel: 'stylesheet', href: 'https://jaysalvat.github.io/vegas/releases/latest/vegas.min.css' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' },
@@ -42,12 +42,12 @@ export default {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }
     ],
     script: [
-      { type: 'text/javascript', src: 'js/jquery.1.11.1.js' },
-      { type: 'text/javascript', src: 'js/bootstrap.js' },
-      { type: 'text/javascript', src: 'js/nivo-lightbox.js' },
-      { type: 'text/javascript', src: 'js/jquery.isotope.js' },
-      { type: 'text/javascript', src: 'js/jqBootstrapValidation.js' },
-      { type: 'text/javascript', src: 'js/main.js' }
+      { type: 'text/javascript', src: '/js/jquery.1.11.1.js' },
+      { type: 'text/javascript', src: '/js/bootstrap.js' },
+      { type: 'text/javascript', src: '/js/nivo-lightbox.js' },
+      { type: 'text/javascript', src: '/js/jquery.isotope.js' },
+      { type: 'text/javascript', src: '/js/jqBootstrapValidation.js' },
+      { type: 'text/javascript', src: '/js/main.js' }
     ]
   },
   /*
@@ -84,7 +84,7 @@ export default {
   },
 
   generate: {
-    subFolders:false
+    subFolders:false,
   },
 
   env: {

@@ -5,7 +5,7 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-          <nuxt-link class="navbar-brand page-scroll" to="/#page-top"><img src="img/c4js_common_log.png"></nuxt-link>
+          <nuxt-link class="navbar-brand page-scroll" to="/#page-top"><img src="/img/c4js_common_log.png"></nuxt-link>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -30,7 +30,7 @@
             <ul>
               <li><a href="https://www.facebook.com/codeforjapan" target="_blank"><i class="fa fa-facebook"></i></a></li>
               <li><a href="https://twitter.com/codeforJP" target="_blank"><i class="fa fa-twitter"></i></a></li>
-              <li style="background-color:#fff;"><a href="https://www.code4japan.org/" target="_blank"><i class="fa"><img src="img/logo_cfj.svg" alt="code for japan logo" style="height:26px;"></i></a></li>
+              <li style="background-color:#fff;"><a href="https://www.code4japan.org/" target="_blank"><i class="fa"><img src="/img/logo_cfj.svg" alt="code for japan logo" style="height:26px;"></i></a></li>
             </ul>
           </div>
           <p>&copy; Code for Japan All rights reserved.</p>
@@ -52,3 +52,15 @@ export default {
   }
 }
 </script>
+
+<style>
+body, html {
+  font-family: 'Raleway', sans-serif;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  color: #777;
+  font-weight: 300;
+  width: 100% !important;
+  height: 100% !important;
+}
+</style>
