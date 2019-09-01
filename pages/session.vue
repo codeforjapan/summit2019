@@ -1,0 +1,137 @@
+<template>
+  <div class="null-container">
+    <!-- Header -->
+    <header id="header" class="session_page">
+      <div class="intro">
+        <div class="overlay">
+          <div class="container">
+            <h1>Program</h1>
+            <p>プログラム</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <div class="tab_wrap">
+      <div class="box26">
+        <span class="box-title">タグの凡例</span>
+        <div class="hanrei_flex">
+          <p>
+            <span style="font-size:0.8em; display:inline-block; background:#fcee21; text-align:center; padding:0 5px;">WS</span>：ワークショップ
+          </p>
+          <p>
+            <span style="font-size:0.8em; display:inline-block; background:#2f94a9; text-align:center; padding:0 5px; color:#fff;">プレゼン</span>：プレゼンテーション
+          </p>
+          <p>
+            <span style="font-size:0.8em; display:inline-block; background:#ff4b00; text-align:center; padding:0 5px; color:#fff;">パネル</span>：パネルディスカッション
+          </p>
+          <p>
+            <span style="font-size:0.8em; display:inline-block; background:#e9b6d2; text-align:center; padding:0 5px;  color:#000;">Keynote</span>：基調講演
+          </p>
+          <p>
+            <span style="font-size:0.8em; display:inline-block; background:#1e1c4d; text-align:center; padding:0 5px; color:#fff;">その他</span>：その他
+          </p>
+        </div>
+      </div>
+    </div><!--.tab_wrap-->
+    <div id="session" class="">
+      <div class="tab_wrap">
+        <input id="tab1" type="radio" name="tab_btn" checked>
+        <input id="tab2" type="radio" name="tab_btn">
+        <div class="tab_area">
+          <label class="tab1_label" for="tab1">Day1</label>
+          <label class="tab2_label" for="tab2">Day2</label>
+        </div>
+
+        <div class="panel_area">
+          <div id="panel1" class="tab_panel">
+            <session-panel :session="s" :key="s.id" v-for="s in day1"></session-panel>
+          </div><!--#panel1-->
+
+          <div id="panel2" class="tab_panel">
+            <session-panel :session="s" :key="s.id" v-for="s in day2"></session-panel>
+          </div><!--#panel2-->
+        </div><!--.panel_area-->
+      </div><!--.tab_wrap-->
+    </div><!--#session-->
+
+    <!--topへ戻る-->
+    <div id="page_top_btn"><a href="#page-top" class="page-scroll"></a></div>
+  </div>
+</template>
+
+<script>
+import _ from 'lodash'
+
+import SessionPanel from '~/components/session-panel'
+
+export default {
+  components: {
+    SessionPanel
+  },
+
+  head() {
+    return {
+      title: 'プログラム',
+    }
+  },
+
+  computed: {
+    day1() {
+      return _.sortBy(
+          _.filter(this.mappedSessions, (s) => {
+            return s.eventDate === '9/28' && !_.isNil(s.category)
+          }), ['startTime']
+      )
+    },
+
+    day2() {
+      return _.sortBy(
+          _.filter(this.mappedSessions, (s) => {
+            return s.eventDate === '9/29'
+          }), ['startTime']
+      )
+    },
+
+    mappedSessions() {
+      return _.map(this.sessions, (s) => {
+        return {
+          id: s.id,
+          eventDate: s.event_date,
+          startTime: s.start_time,
+          endTime: s.end_time,
+          category: s.category,
+          title: s.title,
+          description: s.description,
+          speakers: this.buildSpeakers(s)
+        }
+      })
+    }
+  },
+
+  methods: {
+    buildSpeakers(s) {
+      const suffixes = [ '_name', '_profile', '_picture' ]
+
+      const filtered = _.pickBy(s, (v, k) => {
+        return /^sp\d_name$/.test(k) && !_.isNil(v)
+      })
+
+      return _.map(Object.keys(filtered), (k) => {
+        const prefix = k.substr(0, 3)
+        return {
+          name: s[k],
+          profile: s[`${prefix}_profile`],
+          picture: s[`${prefix}_picture`]
+        }
+      })
+    }
+  },
+
+  async asyncData({ $axios }) {
+    const sessions = await $axios.$get(`${process.env.sessionApiUrl}`)
+    return { sessions }
+  }
+}
+</script>
