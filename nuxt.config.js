@@ -1,6 +1,9 @@
+import axios from 'axios'
+
 const title = 'Code for Japan Summit 2019'
 const description = '国内最大のシビックテックのイベント Code for Japan Summit が千葉で開催。' +
   '今年のテーマは Spark Joy!!'
+const sessionApiUrl = 'https://api.sheety.co/440689e1-19c7-47c7-9c44-f620804b25a5'
 
 export default {
   mode: 'universal',
@@ -86,10 +89,21 @@ export default {
 
   generate: {
     subFolders:false,
+    routes() {
+      return axios.get(sessionApiUrl)
+        .then((response) => {
+          return response.data.map(entry => {
+            return {
+              route: `sessions/${entry.id}`,
+              payload: entry
+            }
+          })
+        })
+    }
   },
 
   env: {
     baseUrl: process.env.BASE_URL || 'http://localhost:3000',
-    sessionApiUrl: 'https://api.sheety.co/440689e1-19c7-47c7-9c44-f620804b25a5'
+    sessionApiUrl: sessionApiUrl
   },
 }
