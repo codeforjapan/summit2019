@@ -34,6 +34,7 @@
         </div>
       </div>
     </div>
+    <script type="text/javascript" src="/js/main.js"></script>
   </div>
 </template>
 

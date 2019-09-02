@@ -2,7 +2,9 @@
   <div class="null-container">
     <!-- Header -->
     <header id="header" class="session_page">
-      <div class="intro"></div>
+      <div class="intro">
+        <div class="overlay"></div>
+      </div>
     </header>
     <div class="content-container">
       <div class="back-link">
@@ -28,10 +30,17 @@
           <div class="label-area">
             シェア &gt;
           </div>
-          <div class="social-icon">
-            <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
-            <a href="https://twitter.com/intent/tweet"><i class="fa fa-twitter fa-lg"></i></a>
-          </div>
+          <social-sharing twitter-user="codeforJP" hashtags="cfjsummit2019" network-tag="a"
+            inline-template>
+            <div class="social-icon">
+              <network network="facebook">
+                <i class="fa fa-facebook fa-lg"></i>
+              </network>
+              <network network="twitter">
+                <i class="fa fa-twitter fa-lg"></i>
+              </network>
+            </div>
+          </social-sharing>
         </div>
       </div>
       <section id="description">
@@ -152,6 +161,10 @@ header .intro {
   height: 95px;
 }
 
+header .overlay {
+  height: 100%;
+}
+
 .back-link {
   padding: 5px 15px;
   font-size: 14px;
@@ -160,6 +173,10 @@ header .intro {
 
 .back-link a {
   color: #777777;
+}
+
+.back-link a:hover {
+  color: #777777B3;
 }
 
 .basic-info {
@@ -267,7 +284,7 @@ section {
 
 @media screen and (min-width: 768px) {
   section {
-    width: 560px;
+    width: 680px;
     margin: 0 auto;
   }
 }
@@ -276,6 +293,7 @@ section h2 {
   margin: 0;
   padding: 20px 15px 10px;
   text-align: center;
+  font-family: 'Noto Sans JP', sans-serif;
   font-size: 14px;
   color: #777777;
 }
@@ -289,7 +307,7 @@ section hr {
 
 section > p {
   margin: 0;
-  padding: 20px 15px 30px;
+  padding: 20px 65px 30px;
 }
 
 .speaker {
