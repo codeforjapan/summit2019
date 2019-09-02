@@ -11,8 +11,8 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><nuxt-link to="/" class="page-scroll">ホーム</nuxt-link></li>
-            <li><nuxt-link to="/session">プログラム</nuxt-link></li>
+            <li><nuxt-link to="/" class="page-scroll" no-prefetch>ホーム</nuxt-link></li>
+            <li><nuxt-link to="/session" no-prefetch>プログラム</nuxt-link></li>
           </ul>
         </div>
         <!-- /.navbar-collapse -->

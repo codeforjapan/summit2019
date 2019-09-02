@@ -920,7 +920,7 @@ input[type="radio"]{display:none;}
 
 
 /*ナビ修正*/
-.navbar-default .navbar-nav > .active > a
+.navbar-default .navbar-nav a.nuxt-link-exact-active
 {
     color: #fcee21 !important;
     font-weight:700 !important;
