@@ -25,7 +25,7 @@
           <th>概要</th>
           <td class="txt detail">
             <div class="grad-wrap">
-              <input :id="triggerId" class="grad-trigger" type="button">
+              <input :id="triggerId" class="grad-trigger" type="button" @click="onClick">
               <label class="grad-btn" :for="triggerId"></label>
               <div class="grad-item">{{ description }}</div>
             </div>
@@ -97,6 +97,10 @@ export default {
       return {
         backgroundImage: _.isNil(s.picture) ? null : `url(authors/${s.picture})`
       }
+    },
+
+    onClick() {
+      this.$router.push(`/sessions/${this.session.id}`)
     }
   }
 }
