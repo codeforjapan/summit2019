@@ -1,8 +1,9 @@
 import axios from 'axios'
 
 const title = 'Code for Japan Summit 2019'
-const description = '国内最大のシビックテックのイベント Code for Japan Summit が千葉で開催。' +
-  '今年のテーマは Spark Joy!!'
+const description = '国内最大のシビックテックのイベント「Code for Japan Summit 2019」が千葉で開催。' +
+  '今年のテーマはSpark Joy!!地域や仲間、テクノロジー。さまざまなことにときめき、活動している人たちの話を聞いて体感してみてください。'
+const ogDescription = '国内最大のシビックテックのイベント「Code for Japan Summit 2019」が千葉で開催。今年のテーマはSpark Joy!!'
 const sessionApiUrl = 'https://api.sheety.co/440689e1-19c7-47c7-9c44-f620804b25a5'
 
 export default {
@@ -27,7 +28,7 @@ export default {
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:url', property: 'og:url', content: 'https://summit2019.code4japan.org/' },
       { hid: 'og:title', property: 'og:title', content: title },
-      { hid: 'og:description', property: 'og:description', content: description },
+      { hid: 'og:description', property: 'og:description', content: ogDescription },
       { hid: 'og:image', property: 'og:image', content: 'https://summit2019.code4japan.org/img/ogp.png' },
       { hid: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' },
       { hid: 'twitter:site', property: 'twitter:site', content: '@codeforJP' }

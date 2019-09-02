@@ -150,7 +150,50 @@
             様々なプレゼンテーションやパネルディスカッション、ワークショップを予定しています！</p>
         </div>
         <div class="col-sm-offset-3 col-sm-6 col-lg-offset-4 col-lg-4">
-          <a href="session.html"><button type="button" class="btn btn-custom btn-lg btn-block">プログラム一覧へ<i class="material-icons" style="position: absolute; bottom: 19px; right: 10px;">arrow_forward_ios</i></button></a>
+          <a href="session.html"><button type="button" class="btn btn-custom btn-lg btn-block">プログラムへ<i class="material-icons" style="position: absolute; bottom: 19px; right: 10px;">arrow_forward_ios</i></button></a>
+        </div>
+      </div>
+    </div>
+
+    <!--Eve  Section -->
+    <div id="eve" class="text-center">
+      <div class="container">
+        <div class="section-title text-center">
+          <div><img src="img/title_eve.png" alt="Eve／前夜祭"></div>
+          <!--<h2>Accessibility</h2>
+          <hr>
+          <p>アクセシビリティ</p>-->
+          <div class="col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
+            <p class="s-read">9/27(金)にCode for Japan Summit 2019の前夜祭を開催予定です！詳細は決まり次第、こちらでお知らせします。Comming soon!</p>
+          </div>
+          <!--<div class="col-sm-offset-3 col-sm-6 col-lg-offset-4 col-lg-4">
+                <a href="https://udtalk.jp" target="_blank"><button type="button" class="btn btn-custom btn-lg btn-block">UDトークへ<i class="material-icons"  style="position: absolute; bottom: 19px; right: 10px;">open_in_new</i></button></a>
+          </div>-->
+        </div>
+      </div>
+    </div>
+
+    <!-- Code of Conduct Section -->
+    <div id="conduct">
+      <div class="section-title text-center center">
+        <div class="overlay">
+          <div><img src="img/title_conduct.png" alt="Code of Conduct／行動規範"></div>
+          <!--<h2>Program</h2>
+          <hr>-->
+          <p>行動規範</p>
+          <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed.</p>-->
+        </div>
+      </div>
+      <div class="container">
+        <!--<div class="hata ab-right"><img src="img/hata.png"></div>
+        <div class="hata_s ab-right-s"><img src="img/hata_s.png"></div>-->
+        <div class="col-md-offset-2 col-md-8 col-md-offset-2 col-lg-offset-3 col-lg-6 col-lg-offset-3">
+          <p class="s-read">
+            Code for Japanは誰もが快くイベントに参加できるようにCode of Conduct（行動規範）を定めています。<br>
+            同意した上でCode for Japan Summitに参加していただくよう、お願いします。</p>
+        </div>
+        <div class="col-sm-offset-3 col-sm-6 col-lg-offset-4 col-lg-4">
+          <a href="https://github.com/codeforjapan/codeofconduct/blob/master/README.md" target="_blank"><button type="button" class="btn btn-custom btn-lg btn-block">詳しく読む<i class="material-icons"  style="position: absolute; bottom: 19px; right: 10px;">open_in_new</i></button></a>
         </div>
       </div>
     </div>
@@ -169,6 +212,55 @@
           <div class="col-sm-offset-3 col-sm-6 col-lg-offset-4 col-lg-4">
             <a href="https://udtalk.jp" target="_blank"><button type="button" class="btn btn-custom btn-lg btn-block">UDトークへ<i class="material-icons"  style="position: absolute; bottom: 19px; right: 10px;">open_in_new</i></button></a>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Partner Section -->
+    <div id="partner">
+      <div class="container">
+        <div class="section-title text-center">
+          <div class="partner_title_box"><img src="img/title_partner.png" alt="partner／協賛"></div>
+          <div class="partner-cat-box">
+            <div class="partner_cat">シルバーパートナー</div>
+            <div class="img_kira_line"><img src="img/kira_line.png"></div>
+            <div class="row">
+              <div class="col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8 img-centerling">
+                <div class="partner_img_box"></div>
+                <div class="partner_img_box"><img src="img/partner/MIERUNE_logo02.png"></div>
+                <div class="partner_img_box"></div>
+              </div>
+            </div>
+          </div>
+          <div class="partner-cat-box">
+            <div class="partner_cat">ブロンズパートナー</div>
+            <div class="img_kira_line"><img src="img/kira_line.png"></div>
+            <div class="row">
+              <!--↓現状ロゴが2個しかないため、暫定レイアウト-->
+              <div class="col-md-offset-3 col-md-6 img-centerling-two">
+                <div class="partner_img_box"><img src="img/partner/150604ATL_logoEN_JP.jpg"></div>
+                <div class="partner_img_box"><img src="img/partner/gaccom_inc_logo.png"></div>
+              </div>
+              <!--↓ロゴが3個以上になった時は、以下レイアウトに切り替え-->
+              <!--<div class="col-md-offset-1 col-md-10 img-centerling">
+                <div class="partner_img_box"><img src=""></div>
+                <div class="partner_img_box"><img src=""></div>
+                <div class="partner_img_box"><img src=""></div>
+              </div>-->
+            </div>
+          </div>
+          <div class="partner-cat-box">
+            <div class="partner_cat">メディアパートナー</div>
+            <div class="img_kira_line"><img src="img/kira_line.png"></div>
+            <div class="row">
+              <div class="col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8 img-centerling">
+                <div class="partner_img_box"></div>
+                <div class="partner_img_box"><img src="img/partner/HOLG_Logo_image.png"></div>
+                <div class="partner_img_box"></div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>

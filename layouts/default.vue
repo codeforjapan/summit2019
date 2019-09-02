@@ -11,11 +11,8 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><nuxt-link to="/#about" class="page-scroll">コンセプト</nuxt-link></li>
-            <li><nuxt-link to="/#restaurant-menu" class="page-scroll">開催概要</nuxt-link></li>
-            <li><nuxt-link to="/#contact" class="page-scroll">チケット</nuxt-link></li>
+            <li><nuxt-link to="/" class="page-scroll">ホーム</nuxt-link></li>
             <li><nuxt-link to="/session">プログラム</nuxt-link></li>
-            <li><nuxt-link to="/#accessibility" class="page-scroll">アクセシビリティ</nuxt-link></li>
           </ul>
         </div>
         <!-- /.navbar-collapse -->

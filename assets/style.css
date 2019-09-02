@@ -327,19 +327,19 @@ header .intro-text {
 	margin-top: -26px;
 }
 /* Portfolio Section */
-#portfolio {
-	/*padding: 0 0 120px 0;*/
-	padding: 0 0 60px 0;
-	position:relative;
+#portfolio, #conduct {
+  /*padding: 0 0 120px 0;*/
+  padding: 0 0 60px 0;
+  position:relative;
 }
-#portfolio .section-title {
-	background: #444 url(/img/f4c3f41480300bd1409c5d3c39479b09_m.jpg) center center no-repeat fixed;
-	background-size: cover;
-	margin-bottom: 10px;
+#portfolio .section-title, #conduct .section-title {
+  background: #444 url(/img/f4c3f41480300bd1409c5d3c39479b09_m.jpg) center center no-repeat fixed;
+  background-size: cover;
+  margin-bottom: 10px;
 }
-#portfolio .section-title h2 {
-	color: #fff;
-	position:relative;
+#portfolio .section-title h2, #conduct .section-title h2 {
+  color: #fff;
+  position:relative;
 }
 /*#portfolio .section-title h2:after {
 	content:url(../img/ao-kira.png);
@@ -542,34 +542,34 @@ ol.type li a:hover {
 	margin: 5px 0;
 }
 /* Contact Section と accessibility Section */
-#contact , #accessibility {
-	padding: 60px 0 60px 0;
-	/*padding: 100px 0 60px 0;*/
-	background:/*url(../img/title_kira.png) top center no-repeat,*/#F6F6F6;
-	position:relative;
+#contact , #accessibility , #eve {
+  padding: 60px 0 60px 0;
+  /*padding: 100px 0 60px 0;*/
+  background:/*url(../img/title_kira.png) top center no-repeat,*/#F6F6F6;
+  position:relative;
 }
-#contact .section-title p , #accessibility .section-title p {
-	color: #777;
+#contact .section-title p , #accessibility .section-title p , #eve .section-title p , #partner .section-title p {
+  color: #777;
 }
-#contact h2 , #accessibility h2 {
-	color: #1e1c4d;
+#contact h2 , #accessibility h2 , #eve h2 , #partner  h2 {
+  color: #1e1c4d;
 }
-#contact h2 + p , #accessibility h2 + p {
-	color: #1e1c4d !important;
-	font-weight:500 !important;
+#contact h2 + p , #accessibility h2 + p , #eve h2 + p , #partner h2 + p {
+  color: #1e1c4d !important;
+  font-weight:500 !important;
 }
 #contact form {
-	padding: 0;
+  padding: 0;
 }
-#contact h3 , #accessibility h3 {
-	text-transform: uppercase;
-	font-size: 20px;
-	font-weight: 400;
-	color: #555;
+#contact h3 , #accessibility h3 , #eve h3 , #partner  h3 {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 400;
+  color: #555;
 }
-#contact .text-danger , #accessibility .text-danger{
-	color: #cc0033;
-	text-align: left;
+#contact .text-danger , #accessibility .text-danger , #eve .text-danger , #partner .text-danger {
+  color: #cc0033;
+  text-align: left;
 }
 label {
 	font-size: 12px;
@@ -825,115 +825,6 @@ span.name_txt{
   #session .container{width: 100%;}
   table{width: 100%;}
 }
-
-
-/*追記　セッションもっと読むボタン*/
-
-.grad-wrap {
-    position: relative;
-}
-
-/*.grad-btn {
-    z-index: 2;
-    position: absolute;
-    right: 0;
-    bottom: 0.5em;
-    left: 0;
-    width: 148px;
-    margin: auto;
-    padding: .5em 0;
-    border-radius: 2px;
-    background: #2f94a9;
-    color: #fff;
-    font-size: 1.3rem;
-    text-align: center;
-    cursor: pointer;
-    transition: .2s ease;
-    box-shadow: 0 0 3px rgba(0,0,0,.3);
-}*/
-
-.grad-btn {
-    z-index: 2;
-    position: absolute;
-    right: 0;
-    bottom: -0.2em;
-    left: 0;
-    width: 148px;
-    margin: auto;
-    padding: .5em 0;
-    border-radius: 2px;
-    color: #2f94a9;
-    font-size: 1.4rem;
-    cursor: pointer;
-    transition: .2s ease;
-    font-weight: 700;
-	text-align: center;
-}
-
-.grad-btn::before {
-  font-family: Material Icons;
-  content: "keyboard_arrow_down";
-  position:relative;
-  top: 0.1em;
-  left:-0.2em;
-  /* WebKitブラウザサポート */
-  -webkit-font-smoothing: antialiased;
-  /* Chrome、Safariサポート */
-  text-rendering: optimizeLegibility;
-  /* Firefoxサポート */
-  -moz-osx-font-smoothing: grayscale;
-  /* IEサポート */
-  font-feature-settings: 'liga';
-}
-.grad-btn::after {
-  content: "Read More"
-}
-.grad-item {
-  position: relative;
-  overflow: hidden;
-  height: 80px; /*隠した状態の高さ*/
-  padding-bottom: 2em;
-}
-.grad-item::before {
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 50px; /*グラデーションで隠す高さ*/
-  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.9) 50%, #fff 100%);
-  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.9) 50%, #fff 100%);
-  background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.9) 50%, #fff 100%); /* IE11 */
-  content: "";
-}
-.grad-trigger {
-  display: none; /*チェックボックスは常に非表示*/
-}
-.grad-trigger:checked ~ .grad-btn::before {
-  font-family: Material Icons;
-  content: "keyboard_arrow_up";
-  position:relative;
-  top: 0.1em;
-  left:-0.2em;
-  /* WebKitブラウザサポート */
-  -webkit-font-smoothing: antialiased;
-  /* Chrome、Safariサポート */
-  text-rendering: optimizeLegibility;
-  /* Firefoxサポート */
-  -moz-osx-font-smoothing: grayscale;
-  /* IEサポート */
-  font-feature-settings: 'liga';
-}
-.grad-trigger:checked ~ .grad-btn::after {
-  content: "Close" /*チェックされていたら、文言を変更する*/
-}
-.grad-trigger:checked ~ .grad-item {
-  height: auto; /*チェックされていたら、高さを戻す*/
-}
-.grad-trigger:checked ~ .grad-item::before {
-  display: none; /*チェックされていたら、grad-itemのbeforeを非表示にする*/
-}
-
 
 /* 追記　セッションタブ　*/
 .tab_wrap{width:680px; margin:0 auto;}
@@ -1380,7 +1271,7 @@ p.app_dl{
 }
 
 /*背景三角形*/
-div#restaurant-menu:after, div#portfolio:after, div#about:after{
+div#restaurant-menu:after, div#portfolio:after, div#about:after, div#conduct:after{
   content: "";
   position: absolute;
   right: 0;
@@ -1394,7 +1285,7 @@ div#restaurant-menu:after, div#portfolio:after, div#about:after{
   border-width: 20px 30px 0 30px;
   z-index:99;
 }
-div#contact:after{
+div#contact:after, div#accessibility:after, div#eve:after{
   content: "";
   position: absolute;
   right: 0;
@@ -1408,3 +1299,79 @@ div#contact:after{
   border-width: 20px 30px 0 30px;
   z-index:99;
 }
+
+/* partner Section */
+#partner {
+  padding: 60px 0 60px 0;
+  background:#FFF;
+  position:relative;
+}
+
+/*協賛カスタマイズ*/
+
+.partner_title_box {
+  margin-bottom:50px;
+}
+
+.partner_img_box {
+  margin-bottom: 15px;
+  text-align:center;
+}
+
+.partner_img_box img {
+  width:212.5px;
+}
+
+@media (min-width: 992px) {
+  .row{
+    margin-bottom: 15px;
+  }
+  .partner_img_box{
+    margin-bottom: 0;
+  }
+  div.img-centerling {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width:992px) and ( max-width:1199px) {
+  div.img-centerling-two{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1200px) {
+  div.img-centerling-two{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
+
+
+.partner_cat{
+  font-weight: 600;
+  font-size: 17px;
+  color: #555;
+  text-align:center;
+  margin: 30px 0 10px;
+}
+
+.img_kira_line{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.partner-cat-box{
+  margin-bottom:80px;
+}
+
+div.img-centerling div{
+  text-align:center;
+}
+

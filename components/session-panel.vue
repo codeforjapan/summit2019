@@ -25,7 +25,7 @@
           <th>概要</th>
           <td class="txt detail">
             <div class="grad-wrap">
-              <input :id="triggerId" class="grad-trigger" type="checkbox">
+              <input :id="triggerId" class="grad-trigger" type="button">
               <label class="grad-btn" :for="triggerId"></label>
               <div class="grad-item">{{ description }}</div>
             </div>
@@ -101,3 +101,100 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+/*追記　セッションもっと読むボタン*/
+.grad-wrap {
+  position: relative;
+}
+
+.grad-btn {
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  bottom: -0.2em;
+  left: 0;
+  width: 148px;
+  margin: auto;
+  padding: .5em 0;
+  border-radius: 2px;
+  color: #2f94a9;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: .2s ease;
+  font-weight: 700;
+  text-align: center;
+}
+
+.grad-btn::before {
+  font-family: Material Icons;
+  content: "keyboard_arrow_right";
+  position:relative;
+  top: 0.1em;
+  left:-0.2em;
+  /* WebKitブラウザサポート */
+  -webkit-font-smoothing: antialiased;
+  /* Chrome、Safariサポート */
+  text-rendering: optimizeLegibility;
+  /* Firefoxサポート */
+  -moz-osx-font-smoothing: grayscale;
+  /* IEサポート */
+  font-feature-settings: 'liga';
+}
+
+.grad-btn::after {
+  content: "Read More"
+}
+
+.grad-item {
+  position: relative;
+  overflow: hidden;
+  height: 80px; /*隠した状態の高さ*/
+  padding-bottom: 2em;
+}
+
+.grad-item::before {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px; /*グラデーションで隠す高さ*/
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.9) 50%, #fff 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.9) 50%, #fff 100%);
+  background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.9) 50%, #fff 100%); /* IE11 */
+  content: "";
+}
+
+.grad-trigger {
+  display: none; /*チェックボックスは常に非表示*/
+}
+
+.grad-trigger:checked ~ .grad-btn::before {
+  font-family: Material Icons;
+  content: "keyboard_arrow_up";
+  position:relative;
+  top: 0.1em;
+  left:-0.2em;
+  /* WebKitブラウザサポート */
+  -webkit-font-smoothing: antialiased;
+  /* Chrome、Safariサポート */
+  text-rendering: optimizeLegibility;
+  /* Firefoxサポート */
+  -moz-osx-font-smoothing: grayscale;
+  /* IEサポート */
+  font-feature-settings: 'liga';
+}
+
+.grad-trigger:checked ~ .grad-btn::after {
+  content: "Close" /*チェックされていたら、文言を変更する*/
+}
+
+.grad-trigger:checked ~ .grad-item {
+  height: auto; /*チェックされていたら、高さを戻す*/
+}
+
+.grad-trigger:checked ~ .grad-item::before {
+  display: none; /*チェックされていたら、grad-itemのbeforeを非表示にする*/
+}
+</style>
