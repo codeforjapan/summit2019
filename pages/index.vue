@@ -264,24 +264,6 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript">
-      $('.intro').vegas({
-        overlay: true,
-        transition: 'flash',
-        transitionDuration: 1000,
-        delay: 3000,
-        animation: 'random',
-        animationDuration: 5000,
-        slides: [
-          {src: '/img/f4c3f41480300bd1409c5d3c39479b09_m.jpg'},
-          {src: '/img/last_year_pic.jpg'},
-          {src: '/img/CFJS2018-308.jpg'},
-          {src: '/img/CFJS2018-135.jpg'},
-          {src: '/img/CFJS2018-206.jpg'},
-          {src: '/img/CFJS2018-356.jpg'},
-        ]
-      });
-    </script>
   </div>
 </template>
 
@@ -293,9 +275,6 @@ export default {
       title: this.title,
       link: [
         { rel: 'stylesheet', href: 'https://jaysalvat.github.io/vegas/releases/latest/vegas.min.css' }
-      ],
-      script: [
-        { type: 'text/javascript', src: 'https://jaysalvat.github.io/vegas/releases/latest/vegas.js' }
       ]
     }
   },
@@ -304,6 +283,35 @@ export default {
     return {
       title: 'Code for Japan Summit 2019 - Spark Joy!'
     }
+  },
+
+  mounted() {
+    $('.intro').vegas({
+      overlay: true,
+      transition: 'flash',
+      transitionDuration: 1000,
+      delay: 3000,
+      animation: 'random',
+      animationDuration: 5000,
+      slides: [
+        {src: '/img/f4c3f41480300bd1409c5d3c39479b09_m.jpg'},
+        {src: '/img/last_year_pic.jpg'},
+        {src: '/img/CFJS2018-308.jpg'},
+        {src: '/img/CFJS2018-135.jpg'},
+        {src: '/img/CFJS2018-206.jpg'},
+        {src: '/img/CFJS2018-356.jpg'},
+      ]
+    });
+  },
+
+  beforeRouteEnter(to, from, next) {
+    next(vm => {
+      console.log('index')
+      const toggle = $(".navbar-toggle").is(":visible");
+      if (toggle) {
+        $(".navbar-collapse").collapse('hide');
+      }
+    })
   }
 }
 </script>

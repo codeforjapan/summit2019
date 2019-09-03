@@ -34,7 +34,6 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="/js/main.js"></script>
   </div>
 </template>
 
@@ -44,8 +43,33 @@ export default {
     const fullPath = `${process.env.baseUrl}${this.$route.fullPath}`
 
     return {
-      link: [{ rel: 'canonical', href: fullPath }],
-      meta: [{ hid: 'og:url', property: 'og:url', content: fullPath }]
+      link: [{rel: 'canonical', href: fullPath}],
+      meta: [{hid: 'og:url', property: 'og:url', content: fullPath}]
+    }
+  },
+
+  mounted() {
+    if (process.client) {
+      window.addEventListener('scroll', this.handleScroll)
+    }
+  },
+
+  methods: {
+    handleScroll() {
+      const pagetop = $('#page_top_btn');
+
+      if ($(window).scrollTop() > 500) {  //100pxスクロールしたら表示
+        pagetop.fadeIn();
+      } else {
+        pagetop.fadeOut();
+      }
+
+      const navHeight = $(window).height() - 500;
+      if ($(window).scrollTop() > navHeight) {
+        $('.navbar-default').addClass('on');
+      } else {
+        $('.navbar-default').removeClass('on');
+      }
     }
   }
 }

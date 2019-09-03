@@ -57,7 +57,7 @@
     </div><!--#session-->
 
     <!--topへ戻る-->
-    <div id="page_top_btn"><a href="#page-top" class="page-scroll"></a></div>
+    <div id="page_top_btn"><a href="#" class="page-scroll" @click.stop="scroll()"></a></div>
   </div>
 </template>
 
@@ -102,9 +102,42 @@ export default {
     }
   },
 
+  mounted() {
+    if (process.client) {
+      window.addEventListener('scroll', this.handleScroll)
+    }
+  },
+
+  beforeRouteEnter(to, from, next) {
+    next(vm => {
+      console.log('session')
+      const toggle = $(".navbar-toggle").is(":visible");
+      if (toggle) {
+        $(".navbar-collapse").collapse('hide');
+      }})
+  },
+
+  methods: {
+    scroll() {
+      this.$SmoothScroll(
+          document.querySelector('#page-top'),
+          400,
+          null,
+          null,
+          'y'
+      )
+    }
+  },
+
   async asyncData({ $axios }) {
     const sessions = await $axios.$get(`${process.env.sessionApiUrl}`)
     return { sessions }
   }
 }
 </script>
+
+<style scoped>
+#page_top_btn {
+  display: none;
+}
+</style>

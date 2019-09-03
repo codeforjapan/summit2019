@@ -64,7 +64,9 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~/plugins/social'
+    '~/plugins/social',
+    '~/plugins/jquery',
+    { src: '~/plugins/scroll', ssr: false }
   ],
   /*
   ** Nuxt.js modules
@@ -77,10 +79,21 @@ export default {
   ** Build configuration
   */
   build: {
+    vendor: [ 'jquery', 'bootstrap', 'vegas' ],
+    plugins: [
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery'
+      })
+    ],
     /*
     ** You can extend webpack config here
     */
-    extend(config, ctx) {
+    extend(config, { isDev, isClient }) {
+      if (isDev && isClient) {
+        config.devtool = 'inline-source-map'
+      }
     }
   },
 
