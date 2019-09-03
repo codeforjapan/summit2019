@@ -81,7 +81,10 @@ import { toCategory } from '~/logic/category'
 export default {
   head() {
     return {
-      title: 'プログラム',
+      title: this.title,
+      meta: [
+        { hid: 'og:title', property: 'og:title', content: this.title },
+      ]
     }
   },
 

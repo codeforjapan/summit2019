@@ -73,8 +73,13 @@ export default {
   },
 
   head() {
+    const title = 'プログラム'
+
     return {
-      title: 'プログラム',
+      title: title,
+      meta: [
+        { hid: 'og:title', property: 'og:title', content: title },
+      ]
     }
   },
 
