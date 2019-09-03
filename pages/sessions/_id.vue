@@ -30,7 +30,9 @@
           <div class="label-area">
             シェア &gt;
           </div>
-          <social-sharing twitter-user="codeforJP" hashtags="cfjsummit2019" network-tag="a"
+          <social-sharing
+            :url="url"
+            twitter-user="codeforJP" hashtags="cfjsummit2019" network-tag="a"
             inline-template>
             <div class="social-icon">
               <network network="facebook">
@@ -92,6 +94,10 @@ export default {
   computed: {
     eventDateTime() {
       return `${this.session.eventDate} ${this.session.startTime} 〜 ${this.session.endTime}`
+    },
+
+    url() {
+      return `${process.env.baseUrl}${this.$route.path}`
     },
 
     room() {
