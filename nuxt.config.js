@@ -44,10 +44,6 @@ export default {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Dancing+Script:400,700' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }
-    ],
-    script: [
-      { type: 'text/javascript', src: '/js/jquery.1.11.1.js' },
-      { type: 'text/javascript', src: '/js/bootstrap.js' }
     ]
   },
   /*
@@ -73,7 +69,7 @@ export default {
   */
   modules: [
     '@nuxtjs/axios',
-    ['@nuxtjs/google-analytics', { id: 'UA-45275834-8' }]
+    '@nuxtjs/google-analytics'
   ],
   /*
   ** Build configuration
@@ -116,4 +112,8 @@ export default {
     baseUrl: process.env.BASE_URL || 'http://localhost:3000',
     sessionApiUrl: sessionApiUrl
   },
+
+  googleAnalytics: {
+    id: 'UA-45275834-8'
+  }
 }
