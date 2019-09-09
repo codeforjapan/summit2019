@@ -44,10 +44,6 @@ export default {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Dancing+Script:400,700' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }
-    ],
-    script: [
-      { type: 'text/javascript', src: '/js/jquery.1.11.1.js' },
-      { type: 'text/javascript', src: '/js/bootstrap.js' }
     ]
   },
   /*
@@ -66,14 +62,14 @@ export default {
   plugins: [
     '~/plugins/social',
     '~/plugins/jquery',
-    { src: '~/plugins/scroll', ssr: false }
+    { src: '~/plugins/scroll', ssr: false },
+    { src: '~/plugins/ga', ssr: false }
   ],
   /*
   ** Nuxt.js modules
   */
   modules: [
     '@nuxtjs/axios',
-    ['@nuxtjs/google-analytics', { id: 'UA-45275834-8' }]
   ],
   /*
   ** Build configuration
@@ -115,5 +111,5 @@ export default {
   env: {
     baseUrl: process.env.BASE_URL || 'http://localhost:3000',
     sessionApiUrl: sessionApiUrl
-  },
+  }
 }
