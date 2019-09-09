@@ -160,15 +160,12 @@
       <div class="container">
         <div class="section-title text-center">
           <div><img src="img/title_eve.png" alt="Eve／前夜祭"></div>
-          <!--<h2>Accessibility</h2>
-          <hr>
-          <p>アクセシビリティ</p>-->
           <div class="col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
-            <p class="s-read">9/27(金)にCode for Japan Summit 2019の前夜祭を開催予定です！詳細は決まり次第、こちらでお知らせします。Comming soon!</p>
+            <p class="s-read">9/27(金)にCode for Japan Summit 2019の前夜祭を開催します！ 参加者によるLT大会、千葉の食材をふんだんに使った料理をお楽しみください！</p>
           </div>
-          <!--<div class="col-sm-offset-3 col-sm-6 col-lg-offset-4 col-lg-4">
-                <a href="https://udtalk.jp" target="_blank"><button type="button" class="btn btn-custom btn-lg btn-block">UDトークへ<i class="material-icons"  style="position: absolute; bottom: 19px; right: 10px;">open_in_new</i></button></a>
-          </div>-->
+          <div class="col-sm-offset-3 col-sm-6 col-lg-offset-4 col-lg-4">
+            <a href="https://cfjsummit2019festival.peatix.com/" target="_blank"><button type="button" class="btn btn-custom btn-lg btn-block">前夜祭イベントページへ<i class="material-icons" style="position: absolute; bottom: 19px; right: 10px;">open_in_new</i></button></a>
+          </div>
         </div>
       </div>
     </div>
@@ -178,15 +175,10 @@
       <div class="section-title text-center center">
         <div class="overlay">
           <div><img src="img/title_conduct.png" alt="Code of Conduct／行動規範"></div>
-          <!--<h2>Program</h2>
-          <hr>-->
           <p>行動規範</p>
-          <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed.</p>-->
         </div>
       </div>
       <div class="container">
-        <!--<div class="hata ab-right"><img src="img/hata.png"></div>
-        <div class="hata_s ab-right-s"><img src="img/hata_s.png"></div>-->
         <div class="col-md-offset-2 col-md-8 col-md-offset-2 col-lg-offset-3 col-lg-6 col-lg-offset-3">
           <p class="s-read">
             Code for Japanは誰もが快くイベントに参加できるようにCode of Conduct（行動規範）を定めています。<br>
@@ -203,9 +195,6 @@
       <div class="container">
         <div class="section-title text-center">
           <div><img src="img/title_accessibility.png" alt="accessibility／アクセシビリティ"></div>
-          <!--<h2>Accessibility</h2>
-          <hr>
-          <p>アクセシビリティ</p>-->
           <div class="col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
             <p class="s-read">Code for Japan Summitではアプリ「UDトーク」を使用して音声認識と自動翻訳によるリアルタイム字幕を提供いたします。<br><br>お手元のスマホ／タブレットでご覧になる方は携帯用のバッテリーのご持参を推奨します。<br>その他、特別な配慮が必要な方はお申し出ください｡</p>
           </div>
