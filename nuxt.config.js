@@ -63,7 +63,7 @@ export default {
     '~/plugins/social',
     '~/plugins/jquery',
     { src: '~/plugins/scroll', ssr: false },
-    '~/plugins/ga'
+    { src: '~/plugins/ga', ssr: false }
   ],
   /*
   ** Nuxt.js modules
