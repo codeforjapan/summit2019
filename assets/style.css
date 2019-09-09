@@ -1375,3 +1375,18 @@ div.img-centerling div{
   text-align:center;
 }
 
+/*ワコムイベントバナー*/
+.wacom_eve_bn{
+  border-top:1px solid #eee;
+  padding-top:60px;
+}
+.ali_cen{
+  text-align:center;
+}
+.wacom_eve_bn_img{
+  width:280px;
+}
+
+.wacom_eve_bn_img:hover{
+  opacity:0.6;
+}
