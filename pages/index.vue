@@ -222,13 +222,42 @@
         <div class="section-title text-center">
           <div class="partner_title_box"><img src="img/title_partner.png" alt="partner／協賛"></div>
           <div class="partner-cat-box">
-            <div class="partner_cat">シルバーパートナー</div>
+            <div class="partner_cat">プラチナパートナー</div>
             <div class="img_kira_line"><img src="img/kira_line.png"></div>
             <div class="row">
               <div class="col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8 img-centerling">
                 <div class="partner_img_box"></div>
-                <div class="partner_img_box"><img src="img/partner/MIERUNE_logo02.png"></div>
+                <div class="partner_img_box"><img src="img/partner/logo_cybozu_Square_rgb.png"></div>
                 <div class="partner_img_box"></div>
+              </div>
+            </div>
+          </div>
+          <div class="partner-cat-box">
+            <div class="partner_cat">ゴールドパートナー</div>
+            <div class="img_kira_line"><img src="img/kira_line.png"></div>
+            <div class="row">
+              <div class="col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8 img-centerling">
+                <div class="partner_img_box"></div>
+                <div class="partner_img_box"><img src="img/partner/Image from iOS.jpg"></div>
+                <div class="partner_img_box"></div>
+              </div>
+            </div>
+          </div>
+          <div class="partner-cat-box">
+            <div class="partner_cat">シルバーパートナー</div>
+            <div class="img_kira_line"><img src="img/kira_line.png"></div>
+            <div class="row">
+              <div class="col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8 img-centerling">
+                <div class="partner_img_box"><img src="img/partner/MIERUNE_logo02.png"></div>
+                <div class="partner_img_box"><img src="img/partner/facebook_wordmark_June2015_blue.png"></div>
+                <div class="partner_img_box"><img src="img/partner/stroly_logo_final_ol_y-01.png"></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8 img-centerling">
+                <div class="partner_img_box"><img src="img/partner/ud_talk_ja.png"></div>
+                <div class="partner_img_box"><img src="img/partner/iL3C_logo-01.png"></div>
+                <div class="partner_img_box"><img src="img/partner/jidousyori.png"></div>
               </div>
             </div>
           </div>
@@ -263,7 +292,12 @@
 
         </div>
       </div>
-    </div>
+
+      <div class="container wacom_eve_bn">
+        <div class="ali_cen"><a href="https://inkathon.bemyapp.com/jp" target="_blank"><img class="wacom_eve_bn_img" src="img/partner/WACOM_Homepage1880x1100.png"></a></div>
+      </div>
+
+    </div><!--#partner-->
   </div>
 </template>
 
