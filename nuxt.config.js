@@ -62,14 +62,15 @@ export default {
   plugins: [
     '~/plugins/social',
     '~/plugins/jquery',
-    { src: '~/plugins/scroll', ssr: false }
+    { src: '~/plugins/scroll', ssr: false },
+    '~/plugins/ga'
   ],
   /*
   ** Nuxt.js modules
   */
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/google-analytics'
+//    '@nuxtjs/google-analytics'
   ],
   /*
   ** Build configuration
