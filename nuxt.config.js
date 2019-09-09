@@ -70,7 +70,6 @@ export default {
   */
   modules: [
     '@nuxtjs/axios',
-//    '@nuxtjs/google-analytics'
   ],
   /*
   ** Build configuration
@@ -112,9 +111,5 @@ export default {
   env: {
     baseUrl: process.env.BASE_URL || 'http://localhost:3000',
     sessionApiUrl: sessionApiUrl
-  },
-
-  googleAnalytics: {
-    id: 'UA-45275834-8'
   }
 }
