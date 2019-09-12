@@ -205,7 +205,6 @@
       </div>
     </div>
 
-    <!-- Partner Section -->
     <div id="partner">
       <div class="container">
         <div class="section-title text-center">
@@ -225,10 +224,9 @@
             <div class="partner_cat">ゴールドパートナー</div>
             <div class="img_kira_line"><img src="img/kira_line.png"></div>
             <div class="row">
-              <div class="col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8 img-centerling">
-                <div class="partner_img_box"></div>
+              <div class="col-md-offset-3 col-md-6 img-centerling-two">
                 <div class="partner_img_box"><img src="img/partner/Image from iOS.jpg"></div>
-                <div class="partner_img_box"></div>
+                <div class="partner_img_box"><img src="img/partner/welmo.jpg"></div>
               </div>
             </div>
           </div>
@@ -249,22 +247,23 @@
                 <div class="partner_img_box"><img src="img/partner/jidousyori.png"></div>
               </div>
             </div>
+            <div class="row">
+              <div class="col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8 img-centerling">
+                <div class="partner_img_box"><img src="img/partner/logo_white.png"></div>
+                <div class="partner_img_box"><img src="img/partner/circle-griffin-01.jpg"></div>
+                <div class="partner_img_box"><img src="img/partner/logo-wide-A-01.jpg"></div>
+              </div>
+            </div>
           </div>
           <div class="partner-cat-box">
             <div class="partner_cat">ブロンズパートナー</div>
             <div class="img_kira_line"><img src="img/kira_line.png"></div>
             <div class="row">
-              <!--↓現状ロゴが2個しかないため、暫定レイアウト-->
-              <div class="col-md-offset-3 col-md-6 img-centerling-two">
+              <div class="col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8 img-centerling">
                 <div class="partner_img_box"><img src="img/partner/150604ATL_logoEN_JP.jpg"></div>
                 <div class="partner_img_box"><img src="img/partner/gaccom_inc_logo.png"></div>
+                <div class="partner_img_box"><img src="img/partner/corporate_logo-01.jpg"></div>
               </div>
-              <!--↓ロゴが3個以上になった時は、以下レイアウトに切り替え-->
-              <!--<div class="col-md-offset-1 col-md-10 img-centerling">
-                <div class="partner_img_box"><img src=""></div>
-                <div class="partner_img_box"><img src=""></div>
-                <div class="partner_img_box"><img src=""></div>
-              </div>-->
             </div>
           </div>
           <div class="partner-cat-box">
@@ -285,7 +284,6 @@
       <div class="container wacom_eve_bn">
         <div class="ali_cen"><a href="https://inkathon.bemyapp.com/jp" target="_blank"><img class="wacom_eve_bn_img" src="img/partner/WACOM_Homepage1880x1100.png"></a></div>
       </div>
-
     </div><!--#partner-->
   </div>
 </template>

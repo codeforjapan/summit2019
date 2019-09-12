@@ -116,7 +116,7 @@ export default {
     },
 
     timeline() {
-      return this.session.timeline.replace(/\r?\n/g, '<br>')
+      return this.session.timeline ? this.session.timeline.replace(/\r?\n/g, '<br>') : ''
     },
 
     category() {
