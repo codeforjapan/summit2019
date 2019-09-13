@@ -66,7 +66,7 @@
             <div class="menu-section">
               <div class="menu-item">
                 <div class="menu-item-name"> 日時 </div>
-                <div class="menu-item-description"><span class="font-large">9月28日(土)・29日(日)</span><br>両日ともAM9：30～食堂「食神」で受付開始<a href="access.html#map_KUIS">　>>構内案内図</a></div>
+                <div class="menu-item-description"><span class="font-large">9月28日(土)・29日(日)</span><br>両日ともAM9：30～食堂「食神」で受付開始<nuxt-link to="/access#map_KUIS">　>>構内案内図</nuxt-link></div>
               </div>
               <div class="menu-item" style="margin-bottom:0;">
                 <div class="menu-item-name"> 会場 </div>
