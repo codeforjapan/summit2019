@@ -93,7 +93,6 @@
 export default {
   beforeRouteEnter(to, from, next) {
     next(vm => {
-      console.log('session')
       const toggle = $(".navbar-toggle").is(":visible");
       if (toggle) {
         $(".navbar-collapse").collapse('hide');
@@ -114,7 +113,7 @@ export default {
   padding: 30px 0 50px 0;
   font-family: 'Noto Sans JP', sans-serif;
 }
-#map_KUIS, #map_8, #map_5, #map-wrap{
+#map-kuis, #map_8, #map_5, #map-wrap{
   border-bottom:1px solid #eee;
 }
 #access .container{
