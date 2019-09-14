@@ -22,9 +22,6 @@
                     </div>
                   </div>
                 </div>
-                <!--<h1></h1>-->
-                <!--<p>Restaurant / Coffee / Pub</p>
-                <a href="#about" class="btn btn-custom btn-lg page-scroll">Discover Story</a>-->
               </div>
             </div>
           </div>
@@ -46,8 +43,6 @@
                 Code for Japan Summitには、国内外の地域や行政で活躍する人たちや様々なテクノロジーが集まります。<br><br>
                 今年のテーマは「Spark Joy!」<br>
                 地域や仲間、テクノロジー。さまざまなことにときめき、活動している人たちの話を聞いて体感してみてください。</p>
-              <!--<h3>Awarded Chefs</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare.</p>-->
             </div>
           </div>
           <div class="col-xs-12 col-md-6" style="padding-left: 30px; text-align: center;">
@@ -62,49 +57,41 @@
       <div class="section-title text-center center">
         <div class="overlay">
           <div><img src="img/title_outline.png" alt="outline／開催概要"></div>
-          <!--<div class="hata"><img src="img/hata.png"></div>-->
-          <!--<h2>Outline</h2>
-          <hr>-->
           <p>開催概要</p>
         </div>
       </div>
       <div class="container">
-        <!-- <div class="hata"><img src="img/hata.png"></div>
-         <div class="hata_s"><img src="img/hata_s.png"></div>-->
         <div class="row">
           <div class="col-xs-12 col-sm-6">
             <div class="menu-section">
-              <!--<h2 class="menu-section-title">Breakfast & Starters</h2>
-              <hr>-->
               <div class="menu-item">
                 <div class="menu-item-name"> 日時 </div>
-                <!--<div class="menu-item-price"> $35 </div>-->
-                <div class="menu-item-description"> 9月28日(土)・29日(日) </div>
+                <div class="menu-item-description">
+                  <span class="font-large">9月28日(土)・29日(日)</span><br>
+                  受付は、AM9：30 より<nuxt-link to="/access#map-kuis">食堂「食神」</nuxt-link>にて
+                </div>
               </div>
               <div class="menu-item" style="margin-bottom:0;">
                 <div class="menu-item-name"> 会場 </div>
-                <!--<div class="menu-item-price"> $30 </div>-->
-                <div class="menu-item-description"> 神田外語大学<br><i class="material-icons" style="position: relative; top: 5px;">place</i><a href="https://goo.gl/maps/u1Niy9p46kz" target="_blank">https://goo.gl/maps/u1Niy9p46kz</a> </div>
+                <div class="menu-item-description">
+                  神田外語大学
+                  <nuxt-link to="/access#access"> >>アクセス</nuxt-link>
+                </div>
               </div>
             </div>
           </div>
           <div class="col-xs-12 col-sm-6">
             <div class="menu-section">
-              <!--<h2 class="menu-section-title">Main Course</h2>
-              <hr>-->
               <div class="menu-item">
                 <div class="menu-item-name"> 参加予定人数 </div>
-                <!--<div class="menu-item-price"> $45 </div>-->
                 <div class="menu-item-description"> 1,000名 </div>
               </div>
               <div class="menu-item">
                 <div class="menu-item-name"> 主催 </div>
-                <!--<div class="menu-item-price"> $30 </div>-->
                 <div class="menu-item-description"><a href="https://www.code4japan.org/" target="_blank"> 一般社団法人　コード・フォー・ジャパン</a> </div>
               </div>
               <div class="menu-item">
                 <div class="menu-item-name"> 共催 </div>
-                <!--<div class="menu-item-price"> $30 </div>-->
                 <div class="menu-item-description"><a href="https://sites.google.com/view/civictechzenchiba/" target="_blank">Civic Tech Zen Chiba</a></div>
               </div>
             </div>
@@ -136,21 +123,16 @@
       <div class="section-title text-center center">
         <div class="overlay">
           <div><img src="img/title_program.png" alt="program／プログラム"></div>
-          <!--<h2>Program</h2>
-          <hr>-->
           <p>プログラム</p>
-          <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed.</p>-->
         </div>
       </div>
       <div class="container">
-        <!--<div class="hata ab-right"><img src="img/hata.png"></div>
-        <div class="hata_s ab-right-s"><img src="img/hata_s.png"></div>-->
         <div class="col-md-offset-2 col-md-8 col-md-offset-2 col-lg-offset-3 col-lg-6 col-lg-offset-3">
           <p class="s-read">
             様々なプレゼンテーションやパネルディスカッション、ワークショップを予定しています！</p>
         </div>
         <div class="col-sm-offset-3 col-sm-6 col-lg-offset-4 col-lg-4">
-          <a href="session.html"><button type="button" class="btn btn-custom btn-lg btn-block">プログラムへ<i class="material-icons" style="position: absolute; bottom: 19px; right: 10px;">arrow_forward_ios</i></button></a>
+          <nuxt-link to="/session"><button type="button" class="btn btn-custom btn-lg btn-block">プログラムへ<i class="material-icons" style="position: absolute; bottom: 19px; right: 10px;">arrow_forward_ios</i></button></nuxt-link>
         </div>
       </div>
     </div>
@@ -327,7 +309,6 @@ export default {
 
   beforeRouteEnter(to, from, next) {
     next(vm => {
-      console.log('index')
       const toggle = $(".navbar-toggle").is(":visible");
       if (toggle) {
         $(".navbar-collapse").collapse('hide');

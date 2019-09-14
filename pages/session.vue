@@ -115,7 +115,6 @@ export default {
 
   beforeRouteEnter(to, from, next) {
     next(vm => {
-      console.log('session')
       const toggle = $(".navbar-toggle").is(":visible");
       if (toggle) {
         $(".navbar-collapse").collapse('hide');
