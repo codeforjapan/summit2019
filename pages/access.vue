@@ -36,10 +36,8 @@
               <div class="kaijyo_name">神田外語大学</div>
               <div class="kaijyo_address">〒261-0014 千葉県千葉市美浜区若葉1-4-1</div>
             </div>
-            <div class="row">
-              <div class="col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6 col-lg-offset-4 col-lg-4">
-                <a href="https://www.kandagaigo.ac.jp/kuis/main/access/" target="_blank"><button type="button" class="btn btn-custom btn-lg btn-block">神田外語大学アクセスページへ<br>(バス時刻表リンクもあります)<i class="material-icons" style="position: absolute; bottom: 25px; right: 10px;">open_in_new</i></button></a>
-              </div>
+            <div class="col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6 col-lg-offset-4 col-lg-4">
+              <a href="https://www.kandagaigo.ac.jp/kuis/main/access/" target="_blank"><button type="button" class="btn btn-custom btn-lg btn-block">神田外語大学アクセスページへ<br>(バス時刻表リンクもあります)<i class="material-icons" style="position: absolute; bottom: 25px; right: 10px;">open_in_new</i></button></a>
             </div>
           </div><!--.gmap-section-->
         </div><!--.container-->
