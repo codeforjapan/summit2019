@@ -34,7 +34,7 @@
         </div><!--.container-->
       </div><!--#map-wrap-->
       ​
-      <div id="map_KUIS">
+      <div id="map-kuis">
         <div class="container">
           <div class="access-section">
             <h2>構内案内図</h2>
