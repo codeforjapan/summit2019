@@ -5,17 +5,8 @@
       <div class="intro">
         <div class="overlay">
           <div class="container">
-            <!--<div class="row">
-              <div class="intro-text">-->
-            <!--<div>
-              <img src="img/MV_logo.png" style="max-width:80%;
-    height: auto;">
-             </div>-->
             <h1>Access</h1>
             <p>アクセス</p>
-            <!--<a href="#about" class="btn btn-custom btn-lg page-scroll">Discover Story</a>-->
-            <!--</div>
-         </div>-->
           </div>
         </div>
       </div>
@@ -98,6 +89,18 @@
   </div>
 </template>
 
+<script>
+export default {
+  beforeRouteEnter(to, from, next) {
+    next(vm => {
+      console.log('session')
+      const toggle = $(".navbar-toggle").is(":visible");
+      if (toggle) {
+        $(".navbar-collapse").collapse('hide');
+      }})
+  }
+}
+</script>
 <style>
 @media (min-width: 1200px){
   #access .container {
