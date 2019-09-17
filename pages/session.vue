@@ -12,30 +12,6 @@
       </div>
     </header>
 
-    <!-- About Section -->
-    <div class="tab_wrap">
-      <div class="box26">
-        <span class="box-title">凡例</span>
-        <div class="hanrei_flex">
-          <p>
-            <span style="font-size:0.8em; display:inline-block; background:#fcee21; text-align:center; padding:0 5px;">WS</span>：ワークショップ
-          </p>
-          <p>
-            <span style="font-size:0.8em; display:inline-block; background:#2f94a9; text-align:center; padding:0 5px; color:#fff;">プレゼン</span>：プレゼンテーション
-          </p>
-          <p>
-            <span style="font-size:0.8em; display:inline-block; background:#ff4b00; text-align:center; padding:0 5px; color:#fff;">パネル</span>：パネルディスカッション
-          </p>
-          <p>
-            <span style="font-size:0.8em; display:inline-block; background:#e9b6d2; text-align:center; padding:0 5px;  color:#000;">Keynote</span>：基調講演
-          </p>
-          <p>
-            <span style="font-size:0.8em; display:inline-block; background:#1e1c4d; text-align:center; padding:0 5px; color:#fff;">その他</span>：その他
-          </p>
-        </div>
-      </div>
-    </div><!--.tab_wrap-->
-
     <div id="timetable">
       <div class="tab_wrap">
         <input id="tab1" type="radio" name="tab_btn" checked>
@@ -50,8 +26,9 @@
             <div class="hosoku">
               <p>※受付 ⇒9:30- 食神で開始<a href="access.html#map_KUIS">　>>構内案内図</a></p>
               <p><span>★１</span> ⇒10:00-10:20 Opening Talk</p>
-              <p><span>★２</span> ⇒11:10-11:30 協賛企業LT／11:30-11:45 セッション紹介</p>
+              <p><span>★２</span> ⇒11:10-11:30 協賛企業LT / 11:30-11:45 セッション紹介</p>
               <p><span>★３</span> ⇒17:45-18:15 Closing Talk</p>
+              <p>※懇親会 ⇒18:30-20:00 食神で開催<a href="access.html#map_KUIS">　>>構内案内図</a></p></p>
             </div>
             <div class="table-wrapper">
               <table>
@@ -285,7 +262,7 @@ export default {
 
 <style scoped>
 #timetable {
-  padding: 0px 0 40px 0;
+  padding: 20px 0 40px 0;
 }
 
 @media screen and (min-width:681px) and (max-width: 1069px) {
