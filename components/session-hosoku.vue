@@ -24,7 +24,7 @@ export default {
 </script>
 
 <style scoped>
-td {
+td.tt_hosoku {
   filter: drop-shadow(5px 5px 5px rgba(0,0,0,.3));
   color:#fff;
 }

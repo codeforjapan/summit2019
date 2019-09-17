@@ -54,7 +54,7 @@ a {
   border: 1px solid #eee;
   margin:0 !important;
 }
-td {
+td.tt_key, td.tt_ws, td.tt_presen, td.tt_panel-dis, td.tt_other {
   filter: drop-shadow(5px 5px 5px rgba(0,0,0,.3));
   color:#fff;
 }
