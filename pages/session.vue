@@ -285,6 +285,14 @@ export default {
   padding: 20px 0 40px 0;
 }
 
+#timetable .hosoku {
+  margin-right:15px;
+  margin-left:15px;
+  margin-bottom:15px;
+  padding:15px;
+  border:2px solid #eee;
+}
+
 @media screen and (min-width:681px) and (max-width: 1069px) {
   #timetable .tab_wrap {
     width: 680px !important;
@@ -332,15 +340,6 @@ export default {
   border-right: 1px solid #eee;
   overflow-wrap : break-word;
   white-space:normal !important;
-}
-#timetable table td.tt_key,
-#timetable table td.tt_ws,
-#timetable table td.tt_presen,
-#timetable table td.tt_panel-dis,
-#timetable table td.tt_other,
-#timetable table td.tt_hosoku {
-  filter: drop-shadow(5px 5px 5px rgba(0,0,0,.3));
-  color:#fff;
 }
 
 th.th_hosoku{

@@ -24,6 +24,10 @@ export default {
 </script>
 
 <style scoped>
+td {
+  filter: drop-shadow(5px 5px 5px rgba(0,0,0,.3));
+  color:#fff;
+}
 td.tt_hosoku div {
   padding: 10px 9px !important;
   font-size: 12px;

@@ -54,6 +54,10 @@ a {
   border: 1px solid #eee;
   margin:0 !important;
 }
+td {
+  filter: drop-shadow(5px 5px 5px rgba(0,0,0,.3));
+  color:#fff;
+}
 td.tt_key a {
   background-color: #cc99b5;
 }
