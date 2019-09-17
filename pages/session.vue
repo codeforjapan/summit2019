@@ -55,10 +55,10 @@
                         </nuxt-link>
                       </div>
                     </th>
-                    <td class="tt_hosoku"><div>★１</div></td>
+                    <session-hosoku :session="findSession(day1AllMap, r, '10:00')">★１</session-hosoku>
                     <session-frame :session="findSession(day1Map, r, '10:20')" />
-                    <td class="tt_hosoku"><div>★２</div></td>
-                    <session-frame :session="findSession(day1Map, r, '12:00')" />
+                    <session-hosoku :session="findSession(day1AllMap, r, '11:10')">★２</session-hosoku>
+                    <session-frame :session="findSession(day1AllMap, r, '12:00')" />
                     <template v-if="needColspan(day1Map, r, '13:15')">
                       <session-frame :session="findSession(day1Map, r, '13:15')" :colspan="2" />
                     </template>
@@ -67,7 +67,7 @@
                       <session-frame :session="findSession(day1Map, r, '14:45')" />
                     </template>
                     <session-frame :session="findSession(day1Map, r, '16:15')" />
-                    <td></td>
+                    <session-hosoku :session="findSession(day1AllMap, r, '17:45')">★３</session-hosoku>
                   </tr>
                 </tbody>
               </table>
@@ -106,14 +106,14 @@
                       </nuxt-link>
                     </div>
                   </th>
-                  <td class="tt_hosoku"><div>★１</div></td>
+                  <session-hosoku :session="findSession(day2AllMap, r, '10:00')">★１</session-hosoku>
                   <session-frame :session="findSession(day2Map, r, '10:20')" />
-                  <td class="tt_hosoku"><div>★２</div></td>
+                  <session-hosoku :session="findSession(day2AllMap, r, '11:10')">★２</session-hosoku>
                   <session-frame :session="findSession(day2Map, r, '12:00')" />
                   <session-frame :session="findSession(day2Map, r, '13:15')" />
                   <session-frame :session="findSession(day2Map, r, '14:45')" />
                   <session-frame :session="findSession(day2Map, r, '16:15')" />
-                  <td></td>
+                  <session-hosoku :session="findSession(day2AllMap, r, '17:30')">★３</session-hosoku>
                 </tr>
                 </tbody>
               </table>
@@ -132,6 +132,7 @@
 import _ from 'lodash'
 
 import SessionFrame from '~/components/session-frame'
+import SessionHosoku from '~/components/session-hosoku'
 import { toSession } from '~/logic/session'
 
 const roomMap = {
@@ -151,7 +152,8 @@ const roomMap = {
 
 export default {
   components: {
-    SessionFrame
+    SessionFrame,
+    SessionHosoku
   },
 
   head() {
@@ -174,12 +176,20 @@ export default {
       return this.sessionMap('9/28')
     },
 
+    day1AllMap() {
+      return this.allSessionMap('9/28')
+    },
+
     day2() {
       return this.availableSessions('9/29')
     },
 
     day2Map() {
       return this.sessionMap('9/29')
+    },
+
+    day2AllMap() {
+      return this.allSessionMap('9/29')
     },
 
     mappedSessions() {
@@ -221,9 +231,19 @@ export default {
     },
 
     sessionMap(targetDate) {
+      return this.makeSessionMap(this.availableSessions(targetDate))
+    },
+
+    allSessionMap(targetDate) {
+      return this.makeSessionMap(_.filter(this.mappedSessions, (s) => {
+        return s.eventDate === targetDate
+      }))
+    },
+
+    makeSessionMap(sessions) {
       const sessionMap = {}
 
-      _.forEach(this.availableSessions(targetDate),
+      _.forEach(sessions,
           (s) => {
             sessionMap[s.room] = sessionMap[s.room] || {}
             sessionMap[s.room][s.startTime] = s
@@ -334,15 +354,7 @@ export default {
   filter: drop-shadow(5px 5px 5px rgba(0,0,0,.3));
   color:#fff;
 }
-td.tt_hosoku div{
-  padding: 10px 9px !important;
-  font-size: 12px;
-  border: 1px solid #eee;
-  background-color: #999;
-  width:100% !important;
-  height:100% !important;
-  margin:0 !important;
-}
+
 th.th_hosoku{
   width: 45px;
 }
