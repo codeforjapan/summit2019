@@ -205,29 +205,4 @@ img.map-sp {
     display:block !important;
   }
 }
-div.hosoku{
-  margin-right:15px;
-  margin-left:15px;
-  margin-bottom:15px;
-  padding:15px;
-  border:2px solid #eee;
-}
-div.hosoku p{
-  font-size:13px;
-  text-align:left;
-  margin:0 0 3px 0;
-}
-div.hosoku p span{
-  background-color: #999;
-  color:#fff;
-  display:inline-block;
-  text-align:center;
-  padding:0 5px;
-}
-/*開催概要　日付大きく*/
-.font-large{
-  font-size:18px;
-  line-height:2em;
-  display:inline-block;
-}
 </style>

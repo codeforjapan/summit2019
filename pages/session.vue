@@ -293,6 +293,20 @@ export default {
   border:2px solid #eee;
 }
 
+#timetable div.hosoku p{
+  font-size:13px;
+  text-align:left;
+  margin:0 0 3px 0;
+}
+
+#timetable div.hosoku p span{
+  background-color: #999;
+  color:#fff;
+  display:inline-block;
+  text-align:center;
+  padding:0 5px;
+}
+
 @media screen and (min-width:681px) and (max-width: 1069px) {
   #timetable .tab_wrap {
     width: 680px !important;
