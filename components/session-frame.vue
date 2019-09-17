@@ -1,5 +1,5 @@
 <template>
-  <td :class="tdClass">
+  <td :class="tdClass" :colspan="colspan">
     <nuxt-link :to="sessionPath" v-if="session">
       <div>
         <span class="session_time">{{ time }}</span><br>
@@ -16,6 +16,11 @@ export default {
   props: {
     session: {
       type: Object
+    },
+
+    colspan: {
+      type: Number,
+      default: 1
     }
   },
 

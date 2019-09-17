@@ -82,8 +82,13 @@
                     <session-frame :session="findSession(day1Map, r, '10:20')" />
                     <td class="tt_hosoku"><div>★２</div></td>
                     <session-frame :session="findSession(day1Map, r, '12:00')" />
-                    <session-frame :session="findSession(day1Map, r, '13:15')" />
-                    <session-frame :session="findSession(day1Map, r, '14:45')" />
+                    <template v-if="needColspan(day1Map, r, '13:15')">
+                      <session-frame :session="findSession(day1Map, r, '13:15')" :colspan="2" />
+                    </template>
+                    <template v-else>
+                      <session-frame :session="findSession(day1Map, r, '13:15')" />
+                      <session-frame :session="findSession(day1Map, r, '14:45')" />
+                    </template>
                     <session-frame :session="findSession(day1Map, r, '16:15')" />
                     <td></td>
                   </tr>
@@ -263,6 +268,11 @@ export default {
     findSession(sessions, room, startTime) {
       const sessionsByRoom = sessions[room]
       return sessionsByRoom ? sessionsByRoom[startTime] : undefined
+    },
+
+    needColspan(sessions, room, startTime) {
+      const session = this.findSession(sessions, room, startTime)
+      return session && session.id === 8
     }
   },
 
