@@ -44,7 +44,7 @@
         </div><!--.container-->
       </div>
       ​
-      <div id="map_8">
+      <div id="map-8">
         <div class="container">
           <div class="access-section">
             <h2>8号館内部</h2>
@@ -57,7 +57,7 @@
         </div><!--.container-->
       </div>
 
-      <div id="map_5">
+      <div id="map-5">
         <div class="container">
           <div class="access-section">
             <h2>ミレニアムハウス（5号館）内部</h2>
@@ -70,7 +70,7 @@
         </div><!--.container-->
       </div>
 
-      <div id="map_syokujin">
+      <div id="map-syokujin">
         <div class="container">
           <div class="access-section">
             <h2>食神内部</h2>
@@ -100,7 +100,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
 @media (min-width: 1200px){
   #access .container {
     width: 970px;
@@ -204,30 +204,5 @@ img.map-sp {
   img.map-sp {
     display:block !important;
   }
-}
-div.hosoku{
-  margin-right:15px;
-  margin-left:15px;
-  margin-bottom:15px;
-  padding:15px;
-  border:2px solid #eee;
-}
-div.hosoku p{
-  font-size:13px;
-  text-align:left;
-  margin:0 0 3px 0;
-}
-div.hosoku p span{
-  background-color: #999;
-  color:#fff;
-  display:inline-block;
-  text-align:center;
-  padding:0 5px;
-}
-/*開催概要　日付大きく*/
-.font-large{
-  font-size:18px;
-  line-height:2em;
-  display:inline-block;
 }
 </style>

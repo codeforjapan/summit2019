@@ -21,7 +21,7 @@
             会場： <span>{{ room }}</span></li>
         </ul>
         <div :class="[tagClass, categoryClass]">
-          {{ category.label }}
+          <div class="tag" v-html="category.label" />
         </div>
       </div>
       <div class="title">
@@ -90,7 +90,7 @@ export default {
 
   data() {
     return {
-      tagClass: 'tag'
+      tagClass: 'basic-info-tag'
     }
   },
 
@@ -213,17 +213,21 @@ header .overlay {
   text-decoration: underline;
 }
 
-.basic-info .tag {
+.basic-info .basic-info-tag {
   position: absolute;
   right: 0;
   top: 0;
-  text-align: center;
-  display: inline-block;
+  width: 8em;
   padding: 0 7px;
-  width: 6em;
-  font-size: 0.85em;
   height: 55px;
   line-height: 55px;
+}
+
+.basic-info-tag .tag {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0.85em;
+  line-height: normal;
 }
 
 .title {
