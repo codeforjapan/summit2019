@@ -758,27 +758,27 @@ table tbody th {
   font-size:0.85em;
 }
 
-.session_header .ws, .tag.ws {
+.session_header .ws, .basic-info-tag.ws {
   background:#fcee21;
   color: #777;
 }
 
-.session_header .presen, .tag.presen {
+.session_header .presen, .basic-info-tag.presen {
   background:#2f94a9;
   color:#FFF;
 }
 
-.session_header .panel-dis, .tag.panel-dis {
+.session_header .panel-dis, .basic-info-tag.panel-dis {
   background:#ff4b00;
   color:#FFF;
 }
 
-.session_header .key, .tag.key {
+.session_header .key, .basic-info-tag.key {
   background:#e9b6d2;
   color:#000;
 }
 
-.session_header .other, .tag.other {
+.session_header .other, .basic-info-tag.other {
   background:#1e1c4d;
   color:#FFF;
 }
