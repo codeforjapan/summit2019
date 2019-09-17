@@ -24,11 +24,11 @@
         <div class="panel_area">
           <div id="panel1" class="tab_panel">
             <div class="hosoku">
-              <p>※受付 ⇒9:30- 食神で開始<a href="access.html#map_KUIS">　>>構内案内図</a></p>
+              <p>※受付 ⇒9:30- 食神で開始<nuxt-link to="/access#map-kuis">　>>構内案内図</nuxt-link></p>
               <p><span>★１</span> ⇒10:00-10:20 Opening Talk</p>
               <p><span>★２</span> ⇒11:10-11:30 協賛企業LT / 11:30-11:45 セッション紹介</p>
               <p><span>★３</span> ⇒17:45-18:15 Closing Talk</p>
-              <p>※懇親会 ⇒18:30-20:00 食神で開催<a href="access.html#map_KUIS">　>>構内案内図</a></p></p>
+              <p>※懇親会 ⇒18:30-20:00 食神で開催<nuxt-link to="/access#map-kuis">　>>構内案内図</nuxt-link></p>
             </div>
             <div class="table-wrapper">
               <table>
@@ -49,7 +49,7 @@
                   <tr v-for="r in roomSet(day1)">
                     <th class="tt_place">
                       <div>
-                        <nuxt-link to="/access">
+                        <nuxt-link :to="withAnchor(r)">
                           {{ r }}<br>
                           <img :src="iconPath(r)">
                         </nuxt-link>
@@ -100,7 +100,7 @@
                 <tr v-for="r in roomSet(day2)">
                   <th class="tt_place">
                     <div>
-                      <nuxt-link to="/access">
+                      <nuxt-link :to="withAnchor(r)">
                         {{ r }}<br>
                         <img :src="iconPath(r)">
                       </nuxt-link>
@@ -136,18 +136,18 @@ import SessionHosoku from '~/components/session-hosoku'
 import { toSession } from '~/logic/session'
 
 const roomMap = {
-  '食神': 'rollcake',
-  '5号館ミレニアムハウス': 'pancake',
-  '8号館8-106': 'cookie',
-  '8号館8-107': 'popcorn',
-  '8号館8-109': 'icecandy',
-  '8号館8-111': 'cupcake',
-  '8号館8-112': 'candy',
-  '8号館8-116': 'crepe-g',
-  '8号館 The Stage': 'sundae',
-  '8号館 The WorkShop': 'pudding',
-  '8号館 Interactive Space': 'softcream',
-  '8号館 FocusSpace': 'chocolate'
+  '食神': { anchor: 'syokujin', icon: 'rollcake' },
+  '5号館ミレニアムハウス': { anchor: '5', icon: 'pancake' },
+  '8号館8-106': { anchor: '8', icon: 'cookie' },
+  '8号館8-107': { anchor: '8', icon: 'popcorn' },
+  '8号館8-109': { anchor: '8', icon: 'icecandy' },
+  '8号館8-111': { anchor: '8', icon: 'cupcake' },
+  '8号館8-112': { anchor: '8', icon: 'candy' },
+  '8号館8-116': { anchor: '8', icon: 'crepe-g' },
+  '8号館 The Stage': { anchor: '8', icon: 'sundae' },
+  '8号館 The WorkShop': { anchor: '8', icon: 'pudding' },
+  '8号館 Interactive Space': { anchor: '8', icon: 'softcream' },
+  '8号館 FocusSpace': { anchor: '8', icon: 'chocolate' }
 }
 
 export default {
@@ -254,7 +254,11 @@ export default {
     },
 
     iconPath(room) {
-      return `img/sweets_ico/${roomMap[room]}.svg`
+      return `img/sweets_ico/${roomMap[room].icon}.svg`
+    },
+
+    withAnchor(room) {
+      return `/access#map-${roomMap[room].anchor}`
     },
 
     roomSet(sessions) {

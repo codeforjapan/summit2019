@@ -44,7 +44,7 @@
         </div><!--.container-->
       </div>
       ​
-      <div id="map_8">
+      <div id="map-8">
         <div class="container">
           <div class="access-section">
             <h2>8号館内部</h2>
@@ -57,7 +57,7 @@
         </div><!--.container-->
       </div>
 
-      <div id="map_5">
+      <div id="map-5">
         <div class="container">
           <div class="access-section">
             <h2>ミレニアムハウス（5号館）内部</h2>
@@ -70,7 +70,7 @@
         </div><!--.container-->
       </div>
 
-      <div id="map_syokujin">
+      <div id="map-syokujin">
         <div class="container">
           <div class="access-section">
             <h2>食神内部</h2>
