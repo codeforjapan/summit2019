@@ -78,4 +78,11 @@ td.tt_key:hover, td.tt_ws:hover, td.tt_presen:hover, td.tt_panel-dis:hover, td.t
   opacity:0.8;
   cursor:pointer;
 }
+
+td div {
+  display: -webkit-box !important;
+  overflow: hidden !important;
+  -webkit-line-clamp: 7 ;
+  -webkit-box-orient: vertical;
+}
 </style>

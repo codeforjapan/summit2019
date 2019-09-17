@@ -295,12 +295,6 @@ export default {
   th.tt_place{
     width:80px !important;
   }
-  #timetable table td div{
-    display: -webkit-box !important;
-    overflow: hidden !important;
-    -webkit-line-clamp: 7 ;
-    -webkit-box-orient: vertical;
-  }
 }
 @media (max-width: 680px) {
   #timetable .container {
@@ -318,12 +312,6 @@ export default {
   }
   th.tt_place{
     width:80px !important;
-  }
-  #timetable table td div{
-    display: -webkit-box !important;
-    overflow: hidden !important;
-    -webkit-line-clamp: 7;
-    -webkit-box-orient: vertical;
   }
 }
 #timetable .tab_wrap {
