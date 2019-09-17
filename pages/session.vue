@@ -58,7 +58,7 @@
                     <session-hosoku :session="findSession(day1AllMap, r, '10:00')">★１</session-hosoku>
                     <session-frame :session="findSession(day1Map, r, '10:20')" />
                     <session-hosoku :session="findSession(day1AllMap, r, '11:10')">★２</session-hosoku>
-                    <session-frame :session="findSession(day1AllMap, r, '12:00')" />
+                    <session-frame :session="findSession(day1Map, r, '12:00')" />
                     <template v-if="needColspan(day1Map, r, '13:15')">
                       <session-frame :session="findSession(day1Map, r, '13:15')" :colspan="2" />
                     </template>
