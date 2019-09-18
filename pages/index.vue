@@ -14,10 +14,8 @@
                         <img src="/img/MV_logo_2.png">
                       </div>
                       <div class="mv_text">
-                        <p class="event-name-row">CODE <span style="font-weight:100;">for</span> JAPAN<br>SUMMIT <span style="color:#fcee21;">2019</span></p>
-                        <p class="event-name-col">CODE <span style="font-weight:100;">for</span> JAPAN SUMMIT <span style="color:#fcee21;">2019</span></p>
-                        <p class="event-date-row">2019.9.28(sat.)-29(sun.)<br><span style="font-size:0.8em;">＠ 神田外語大学</span></p>
-                        <p class="event-date-col">2019.9.28(sat.)-29(sun.)　<span style="font-size:0.8em;">＠ 神田外語大学</span></p>
+                        <h1>CODE <span class="subtitle">for</span> JAPAN<br>SUMMIT <span class="date">2019</span></h1>
+                        <p class="event-date">2019.9.28(sat.)-29(sun.)<br><span class="venue">＠ 神田外語大学</span></p>
                         <p class="app_dl"><a href="https://apps.apple.com/app/id1464997175" target="_blank"><img src="img/banner-appstore.png" style="height:40px; width:auto; margin-right:10px;" alt="App Storeからアプリをダウンロード"></a><a href="https://play.google.com/store/apps/details?id=org.code4nerima.c4js" target="_blank"><img src="img/banner-google-play.png" style="height:40px; width:auto;" alt="Google Playからアプリをダウンロード"></a></p>                  </div>
                     </div>
                   </div>
@@ -317,3 +315,68 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+h1 {
+  margin-bottom: 40px;
+  text-align: left;
+  font-size: 4em;
+  font-weight: 800;
+  font-family: 'Khula', 'Noto Sans JP', sans-serif;
+}
+
+h1 .subtitle {
+  font-weight: 100;
+}
+
+h1 .date {
+  color: #fcee21;
+}
+
+p.event-date {
+  margin-bottom:0;
+  text-align:left;
+  font-weight:800;
+  font-size: 32px;
+  font-family: 'Khula', 'Noto Sans JP', sans-serif;
+  line-height: 1.2;
+}
+
+p.event-date .venue {
+  font-size: 0.8em;
+}
+
+@media (max-width: 1199px) {
+  h1 {
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 3.8em;
+  }
+
+  h1 br {
+    display: none;
+  }
+
+  p.event-date {
+    text-align:center;
+    line-height: normal;
+  }
+
+  p.event-date br {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  h1 {
+    margin-bottom: 10px;
+    font-size: 3em;
+    text-align: center;
+  }
+
+  p.event-date {
+    text-align: center;
+    font-size: 1.5em;
+  }
+}
+</style>
