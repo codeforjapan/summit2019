@@ -36,7 +36,7 @@ export default {
       { hid: 'twitter:site', property: 'twitter:site', content: '@codeforJP' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: 'img/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/img/favicon.ico' },
       { rel: 'stylesheet', href: '/css/bootstrap.css' },
       { rel: 'stylesheet', href: '/fonts/font-awesome/css/font-awesome.css' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700' },
@@ -70,6 +70,7 @@ export default {
   */
   modules: [
     '@nuxtjs/axios',
+    '@nuxtjs/sitemap'
   ],
   /*
   ** Build configuration
@@ -98,12 +99,14 @@ export default {
     routes() {
       return axios.get(sessionApiUrl)
         .then((response) => {
-          return response.data.map(entry => {
-            return {
-              route: `sessions/${entry.id}`,
-              payload: entry
-            }
-          })
+          return response.data.filter(entry => {
+              return entry.category
+            }).map(entry => {
+              return {
+                route: `sessions/${entry.id}`,
+                payload: entry
+              }
+            })
         })
     }
   },
@@ -111,5 +114,13 @@ export default {
   env: {
     baseUrl: process.env.BASE_URL || 'http://localhost:3000',
     sessionApiUrl: sessionApiUrl
+  },
+
+  sitemap: {
+    hostname: 'https://summit2019.code4japan.org',
+    defaults: {
+      lastmod: new Date(),
+      lastmodrealtime: true
+    }
   }
 }
