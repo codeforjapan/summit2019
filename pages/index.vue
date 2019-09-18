@@ -204,9 +204,10 @@
             <div class="partner_cat">ゴールドパートナー</div>
             <div class="img_kira_line"><img src="img/kira_line.png"></div>
             <div class="row">
-              <div class="col-md-offset-3 col-md-6 img-centerling-two">
+              <div class="col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8 img-centerling">
                 <div class="partner_img_box"><img src="img/partner/Image from iOS.jpg"></div>
                 <div class="partner_img_box"><img src="img/partner/welmo.jpg"></div>
+                <div class="partner_img_box"><img src="img/partner/georepublic.svg"></div>
               </div>
             </div>
           </div>

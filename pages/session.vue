@@ -89,7 +89,7 @@
                   <th class="tt_time th_hosoku"></th>
                   <th class="tt_time">Keynote<br><span class="time_small">10:20-11:10</span></th>
                   <th class="tt_time th_hosoku"></th>
-                  <th class="tt_time">ランチSssion<br><span class="time_small">12:00-13:00</span></th>
+                  <th class="tt_time">ランチSession<br><span class="time_small">12:00-13:00</span></th>
                   <th class="tt_time">ミニSession1<br><span class="time_small">13:15-14:30</span></th>
                   <th class="tt_time">ミニsession2<br><span class="time_small">14:45-16:00</span></th>
                   <th class="tt_time">ミニsession3<br><span class="time_small">16:15-17:30</span></th>
@@ -110,8 +110,13 @@
                   <session-frame :session="findSession(day2Map, r, '10:20')" />
                   <session-hosoku :session="findSession(day2AllMap, r, '11:10')">★２</session-hosoku>
                   <session-frame :session="findSession(day2Map, r, '12:00')" />
-                  <session-frame :session="findSession(day2Map, r, '13:15')" />
-                  <session-frame :session="findSession(day2Map, r, '14:45')" />
+                  <template v-if="needColspan(day2Map, r, '13:15')">
+                    <session-frame :session="findSession(day2Map, r, '13:15')" :colspan="2" />
+                  </template>
+                  <template v-else>
+                    <session-frame :session="findSession(day2Map, r, '13:15')" />
+                    <session-frame :session="findSession(day2Map, r, '14:45')" />
+                  </template>
                   <session-frame :session="findSession(day2Map, r, '16:15')" />
                   <session-hosoku :session="findSession(day2AllMap, r, '17:30')">★３</session-hosoku>
                 </tr>
@@ -134,21 +139,7 @@ import _ from 'lodash'
 import SessionFrame from '~/components/session-frame'
 import SessionHosoku from '~/components/session-hosoku'
 import { toSession } from '~/logic/session'
-
-const roomMap = {
-  '食神': { anchor: 'syokujin', icon: 'rollcake' },
-  '5号館ミレニアムハウス': { anchor: '5', icon: 'pancake' },
-  '8号館8-106': { anchor: '8', icon: 'cookie' },
-  '8号館8-107': { anchor: '8', icon: 'popcorn' },
-  '8号館8-109': { anchor: '8', icon: 'icecandy' },
-  '8号館8-111': { anchor: '8', icon: 'cupcake' },
-  '8号館8-112': { anchor: '8', icon: 'candy' },
-  '8号館8-116': { anchor: '8', icon: 'crepe-g' },
-  '8号館 The Stage': { anchor: '8', icon: 'sundae' },
-  '8号館 The WorkShop': { anchor: '8', icon: 'pudding' },
-  '8号館 Interactive Space': { anchor: '8', icon: 'softcream' },
-  '8号館 FocusSpace': { anchor: '8', icon: 'chocolate' }
-}
+import { iconPath, linkWithAnchor, rooms } from '~/logic/room'
 
 export default {
   components: {
@@ -254,16 +245,16 @@ export default {
     },
 
     iconPath(room) {
-      return `img/sweets_ico/${roomMap[room].icon}.svg`
+      return iconPath(room)
     },
 
     withAnchor(room) {
-      return `/access#map-${roomMap[room].anchor}`
+      return linkWithAnchor(room)
     },
 
     roomSet(sessions) {
       const filteredRooms = _.uniq(_.map(sessions, (s) => s.room))
-      return _.filter(Object.keys(roomMap), (r) => filteredRooms.includes(r))
+      return _.filter(Object.keys(rooms()), (r) => filteredRooms.includes(r))
     },
 
     findSession(sessions, room, startTime) {
@@ -273,7 +264,7 @@ export default {
 
     needColspan(sessions, room, startTime) {
       const session = this.findSession(sessions, room, startTime)
-      return session && session.id === 8
+      return session && [ 8, 9 ].includes(session.id)
     }
   },
 

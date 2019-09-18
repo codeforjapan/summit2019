@@ -18,7 +18,11 @@
           </li>
           <li>
             <i class="fa fa-map-marker"></i>
-            会場： <span>{{ room }}</span></li>
+            会場：
+            <nuxt-link :to="linkWithAnchor(room)">
+              {{ room }}
+            </nuxt-link>
+          </li>
         </ul>
         <div :class="[tagClass, categoryClass]">
           <div class="tag" v-html="category.label" />
@@ -77,6 +81,7 @@ import _ from 'lodash'
 
 import { toSession } from '~/logic/session'
 import { toCategory } from '~/logic/category'
+import { linkWithAnchor } from '~/logic/room'
 
 export default {
   head() {
@@ -137,6 +142,10 @@ export default {
       return {
         backgroundImage: _.isNil(s.picture) ? null : `url(/authors/${s.picture})`
       }
+    },
+
+    linkWithAnchor(room) {
+      return linkWithAnchor(room)
     }
   },
 
@@ -209,7 +218,8 @@ header .overlay {
   height: 15px;
 }
 
-.basic-info span {
+.basic-info a {
+  color: #FFF;
   text-decoration: underline;
 }
 
