@@ -70,6 +70,7 @@ export default {
   */
   modules: [
     '@nuxtjs/axios',
+    '@nuxtjs/sitemap'
   ],
   /*
   ** Build configuration
@@ -98,12 +99,14 @@ export default {
     routes() {
       return axios.get(sessionApiUrl)
         .then((response) => {
-          return response.data.map(entry => {
-            return {
-              route: `sessions/${entry.id}`,
-              payload: entry
-            }
-          })
+          return response.data.filter(entry => {
+              return entry.category
+            }).map(entry => {
+              return {
+                route: `sessions/${entry.id}`,
+                payload: entry
+              }
+            })
         })
     }
   },
@@ -111,5 +114,13 @@ export default {
   env: {
     baseUrl: process.env.BASE_URL || 'http://localhost:3000',
     sessionApiUrl: sessionApiUrl
+  },
+
+  sitemap: {
+    hostname: 'https://summit2019.code4japan.org',
+    defaults: {
+      lastmod: new Date(),
+      lastmodrealtime: true
+    }
   }
 }
