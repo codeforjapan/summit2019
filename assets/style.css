@@ -947,11 +947,12 @@ input[type="radio"]{display:none;}
 }
 
 .mv_elements_wrap{
-    display: flex;
-    flex-direction: row;
-    width: auto;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 }
 
 .mv_elements_wrap img{

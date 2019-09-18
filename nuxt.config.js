@@ -36,7 +36,7 @@ export default {
       { hid: 'twitter:site', property: 'twitter:site', content: '@codeforJP' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: 'img/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/img/favicon.ico' },
       { rel: 'stylesheet', href: '/css/bootstrap.css' },
       { rel: 'stylesheet', href: '/fonts/font-awesome/css/font-awesome.css' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700' },

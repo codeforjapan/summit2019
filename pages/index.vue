@@ -318,7 +318,7 @@ export default {
 
 <style scoped>
 h1 {
-  margin-bottom: 40px;
+  margin: 10px 0 40px;
   text-align: left;
   font-size: 4em;
   font-weight: 800;
@@ -335,8 +335,8 @@ h1 .date {
 
 p.event-date {
   margin-bottom:0;
-  text-align:left;
-  font-weight:800;
+  text-align: left;
+  font-weight: 800;
   font-size: 32px;
   font-family: 'Khula', 'Noto Sans JP', sans-serif;
   line-height: 1.2;
@@ -358,7 +358,7 @@ p.event-date .venue {
   }
 
   p.event-date {
-    text-align:center;
+    text-align: center;
     line-height: normal;
   }
 
@@ -374,9 +374,18 @@ p.event-date .venue {
     text-align: center;
   }
 
+  h1 br {
+    display: inline;
+  }
+
   p.event-date {
     text-align: center;
     font-size: 1.5em;
+    line-height: 1.2;
+  }
+
+  p.event-date br {
+    display: inline;
   }
 }
 </style>
