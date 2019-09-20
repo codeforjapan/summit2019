@@ -235,6 +235,13 @@
                 <div class="partner_img_box"><img src="img/partner/logo-wide-A-01.jpg"></div>
               </div>
             </div>
+            <div class="row">
+              <div class="col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8 img-centerling">
+                <div class="partner_img_box"></div>
+                <div class="partner_img_box"><img src="img/partner/here.jpg"></div>
+                <div class="partner_img_box"></div>
+              </div>
+            </div>
           </div>
           <div class="partner-cat-box">
             <div class="partner_cat">ブロンズパートナー</div>
