@@ -109,13 +109,18 @@
                   <session-hosoku :session="findSession(day2AllMap, r, '10:00')">★１</session-hosoku>
                   <session-frame :session="findSession(day2Map, r, '10:20')" />
                   <session-hosoku :session="findSession(day2AllMap, r, '11:10')">★２</session-hosoku>
-                  <session-frame :session="findSession(day2Map, r, '12:00')" />
-                  <template v-if="needColspan(day2Map, r, '13:15')">
-                    <session-frame :session="findSession(day2Map, r, '13:15')" :colspan="2" />
+                  <template v-if="needColspan(day2Map, r, '12:00')">
+                    <session-frame :session="findSession(day2Map, r, '12:00')" :colspan="3" />
                   </template>
                   <template v-else>
-                    <session-frame :session="findSession(day2Map, r, '13:15')" />
-                    <session-frame :session="findSession(day2Map, r, '14:45')" />
+                    <session-frame :session="findSession(day2Map, r, '12:00')" />
+                    <template v-if="needColspan(day2Map, r, '13:15')">
+                      <session-frame :session="findSession(day2Map, r, '13:15')" :colspan="2" />
+                    </template>
+                    <template v-else>
+                      <session-frame :session="findSession(day2Map, r, '13:15')" />
+                      <session-frame :session="findSession(day2Map, r, '14:45')" />
+                    </template>
                   </template>
                   <session-frame :session="findSession(day2Map, r, '16:15')" />
                   <session-hosoku :session="findSession(day2AllMap, r, '17:30')">★３</session-hosoku>
@@ -264,7 +269,7 @@ export default {
 
     needColspan(sessions, room, startTime) {
       const session = this.findSession(sessions, room, startTime)
-      return session && [ 8, 9 ].includes(session.id)
+      return session && [ 8, 9, 82 ].includes(session.id)
     }
   },
 
