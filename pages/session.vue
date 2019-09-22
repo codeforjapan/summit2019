@@ -413,7 +413,6 @@ th.tt_place div{
   height:100% !important;
   border-bottom:1px solid #eee;
   border-right:1px solid #eee;
-  padding: 0.35em 0;
 }
 
 #page_top_btn {
