@@ -1,8 +1,12 @@
 <template>
   <td :class="tdClass" :colspan="colspan">
-    <div v-if="session" @click="toSession">
-      <span class="session_time">{{ time }}</span><br>
-      {{ title }}
+    <div class="session_wrap" v-if="session" @click="toSession">
+      <div class="reader_wrap">
+        <div>
+          <span class="session_time">{{ time }}</span><br>
+          {{ title }}
+        </div>
+      </div>
     </div>
   </td>
 </template>
@@ -55,13 +59,26 @@ td {
 td div {
   color: white;
   width: 100% !important;
-  padding: 0.5em 0.75em !important;
+  padding: 0 !important;
   margin: 0 !important;
 
   display: -webkit-box !important;
   overflow: hidden !important;
   -webkit-line-clamp: 7 ;
   -webkit-box-orient: vertical;
+}
+div.session_wrap {
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 100% !important;
+  width: 100% !important;
+  opacity: .8;
+  cursor: pointer;
+}
+div.reader_wrap {
+  padding: 0.5em !important;
+  margin: 0 !important;
+  width: 100% !important;
 }
 td.tt_key, td.tt_ws, td.tt_presen, td.tt_panel-dis, td.tt_other {
   filter: drop-shadow(5px 5px 5px rgba(0,0,0,.3));
@@ -81,10 +98,6 @@ td.tt_panel-dis {
 }
 td.tt_other {
   background-color: #120f4d;
-}
-td.tt_key:hover, td.tt_ws:hover, td.tt_presen:hover, td.tt_panel-dis:hover, td.tt_other:hover {
-  opacity:0.8;
-  cursor:pointer;
 }
 td .session_time {
   font-size: 11px;
