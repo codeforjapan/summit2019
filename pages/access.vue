@@ -91,6 +91,17 @@
 
 <script>
 export default {
+  head() {
+    const title = 'アクセス'
+
+    return {
+      title: title,
+      meta: [
+        { hid: 'og:title', property: 'og:title', content: title },
+      ]
+    }
+  },
+
   beforeRouteEnter(to, from, next) {
     next(vm => {
       const toggle = $(".navbar-toggle").is(":visible");
@@ -100,6 +111,7 @@ export default {
   }
 }
 </script>
+
 <style scoped>
 @media (min-width: 1200px){
   #access .container {
