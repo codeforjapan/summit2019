@@ -303,7 +303,7 @@ export default {
       title: 'Code for Japan Summit 2019 - Spark Joy!',
       videoId: 'lnJrIjBPhxc',
       options: {
-        autoplay: 1,
+        autoplay: 0,
         controls: 0
       }
     }
