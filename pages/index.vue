@@ -413,7 +413,7 @@ p.event-date .venue {
 }
 
 div.movie-box {
-  border: solid 1px #eee;
+  border: solid 1px #2f94a9;
   margin-bottom: 50px;
 }
 div.movie-box-title {
