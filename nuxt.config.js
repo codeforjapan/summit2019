@@ -63,6 +63,7 @@ export default {
     '~/plugins/social',
     '~/plugins/jquery',
     { src: '~/plugins/scroll', ssr: false },
+    { src: '~/plugins/youtube', ssr: false },
     { src: '~/plugins/ga', ssr: false }
   ],
   /*
