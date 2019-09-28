@@ -301,7 +301,7 @@ export default {
   data() {
     return {
       title: 'Code for Japan Summit 2019 - Spark Joy!',
-      videoId: 'l0ErCcsR3d0',
+      videoId: 'IuA9hiuVKpc',
       options: {
         autoplay: 0,
         controls: 0
