@@ -30,17 +30,6 @@
     <div id="about">
       <div class="container">
         <div class="row">
-          <div class="col-md-offset-2 col-md-8 col-md-offset-2 col-lg-offset-3 col-lg-6 col-lg-offset-3 movie-box">
-            <div class="partner_cat movie-box-title">
-              <i class="material-icons">live_tv</i>サミットLive配信中！<i class="material-icons">live_tv</i>
-            </div>
-            <div class="img_kira_line"><img src="img/kira_line.png"></div>
-            <div class="movie-ytb">
-              <youtube :video-id="videoId" :fit-parent="true" :player-vars="options" ref="youtube" />
-            </div>
-          </div>
-        </div>
-        <div class="row">
           <div class="col-xs-12 col-md-6">
             <div class="about-text">
               <h2 style="font-family: 'Raleway', sans-serif; font-weight:500; font-size:34px; color: #1e1c4d;">トキメキとテクノロジーで地域をつくる</h2>
@@ -300,12 +289,7 @@ export default {
 
   data() {
     return {
-      title: 'Code for Japan Summit 2019 - Spark Joy!',
-      videoId: 'i1eIUsiWDMU',
-      options: {
-        autoplay: 0,
-        controls: 0
-      }
+      title: 'Code for Japan Summit 2019 - Spark Joy!'
     }
   },
 
