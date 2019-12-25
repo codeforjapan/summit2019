@@ -11,6 +11,7 @@ function toSession(json) {
     title: json.title,
     description: json.description,
     timeline: json.timeline,
+    movieId: json.movie_id,
     speakers: buildSpeakers(json)
   }
 }

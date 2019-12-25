@@ -72,6 +72,13 @@
           </div>
         </div>
       </section>
+      <section id="movie" v-if="hasMovie">
+        <h2>動画</h2>
+        <hr>
+        <div class="movie-container">
+          <youtube :video-id="movieId" :player-vars="movieOptions" ref="youtube" />
+        </div>
+      </section>
     </div>
   </div>
 </template>
@@ -95,7 +102,11 @@ export default {
 
   data() {
     return {
-      tagClass: 'basic-info-tag'
+      tagClass: 'basic-info-tag',
+      movieOptions: {
+        autoplay: 0,
+        controls: 0
+      }
     }
   },
 
@@ -134,6 +145,14 @@ export default {
 
     speakers() {
       return this.session.speakers
+    },
+
+    movieId() {
+      return this.session.movieId
+    },
+
+    hasMovie() {
+      return this.session.movieId != null
     }
   },
 
@@ -370,6 +389,15 @@ section > p {
   line-height: 1.5;
 
   padding: 6px 0 20px;
+}
+
+.movie-container {
+  padding: 30px 15px;
+}
+
+.movie-container iframe {
+  width: 100%;
+  max-width: 650px;
 }
 
 </style>
